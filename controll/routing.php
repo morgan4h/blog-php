@@ -33,7 +33,12 @@ function routing($addr)
         // Redirect the user to the mailto link
         header("Location: $mailToLink");
         exit();
-    } else {
+    }else if ($addr == 'my') {
+        header('Location: ../public/pages/store.html?b=my');
+    }else if ($addr == 'general') {
+        header('Location: ../public/pages/store.html?b=general');
+    }
+    else {
         //   header('Location: ../public/index.html');
     }
 }

@@ -1,0 +1,200 @@
+<!-- admin-app-form.html -->
+<main class="admin-main">
+  <form class="app-form" id="appForm" novalidate>
+    <h1 class="title">Add /  App</h1>
+
+
+
+    <div class="row">
+      <label for="name">App Name</label>
+      <input id="name" name="name" type="text" placeholder="cheat engine - mod menu - anti black list tool" value="cheat engine - mod  menu - anti black list tool" required />
+    </div>
+
+    <div class="row">
+      <label for="type">Type</label>
+      <select id="type" name="type">
+        <option value="general">general</option>
+        <option value="my-tool">my tool</option>
+      </select>
+    </div>
+
+    <div class="row">
+      <label for="picture">Picture (filename)</label>
+      <input id="picture" name="picture" type="text" placeholder="app.png" value="app.png" />  
+    </div>
+
+    <div class="row">
+      <label for="picture">Category</label>
+      <input id="picture" name="picture" type="text" placeholder="category"  />  
+      </select>
+      <small class="hint">Hold Ctrl / Cmd to select multiple</small>
+    </div>
+
+    <div class="row">
+      <label for="description">Description</label>
+      <textarea id="description" name="description" rows="4" placeholder="note about the app">note about the app</textarea>
+    </div>
+
+    <div class="inline-row">
+      <div>
+        <label for="version">Version</label>
+        <input id="version" name="version" type="text" placeholder="1.1.1" value="1.1.1" />
+      </div>
+      <div>
+        <label for="size">Size</label>
+        <input id="size" name="size" type="text" placeholder="20mb" value="20mb" />
+      </div>
+    </div>
+
+    <div class="row">
+      <label for="download">Download Link</label>
+      <input id="download" name="download" type="url" placeholder="https://download/down.apk" value="https://downlaod/down.apk" />
+    </div>
+
+    <div class="actions">
+      <button type="submit" class="btn primary">Save App</button>
+      <!-- <button type="button" class="btn ghost" id="previewBtn">Preview</button> -->
+    </div>
+
+      </div>
+    </div>
+  </form>
+</main>
+
+<style>
+:root{
+  --bg:#0f1724;
+  --card:#0b1220;
+  --muted:#9aa4b2;
+  --accent:#6ee7b7;
+  --accent-2:#60a5fa;
+  --glass: rgba(255,255,255,0.04);
+  --radius:12px;
+  --gap:14px;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+.admin-main{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:48px;
+  background: linear-gradient(180deg, rgba(6,10,17,1) 0%, rgba(10,15,24,1) 100%);
+  color: #e6eef6;
+}
+
+.app-form{
+  width:920px;
+  max-width:96%;
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius:var(--radius);
+  padding:28px;
+  box-shadow: 0 8px 30px rgba(2,6,23,0.6);
+  border: 1px solid rgba(255,255,255,0.03);
+}
+
+.title{
+  margin:0 0 18px 0;
+  font-size:20px;
+  letter-spacing:0.2px;
+}
+
+.row{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  margin-bottom:var(--gap);
+}
+
+.inline-row{
+  display:flex;
+  gap:16px;
+  margin-bottom:var(--gap);
+}
+.inline-row > div{flex:1}
+
+label{
+  font-size:12px;
+  color:var(--muted);
+  margin-bottom:6px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="url"],
+select,
+textarea{
+  background:var(--card);
+  border:1px solid rgba(255,255,255,0.03);
+  padding:10px 12px;
+  border-radius:8px;
+  color:inherit;
+  outline:none;
+  font-size:14px;
+}
+
+select[multiple] {height:88px; padding:10px;}
+
+.hint{font-size:12px;color:var(--muted);}
+
+.actions{
+  display:flex;
+  gap:12px;
+  margin-top:6px;
+  align-items:center;
+}
+
+.btn{
+  border:0;
+  padding:10px 14px;
+  border-radius:10px;
+  font-weight:600;
+  cursor:pointer;
+  background:transparent;
+  color:inherit;
+  border:1px solid rgba(255,255,255,0.04);
+}
+
+.btn.primary{
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color:#042024;
+  border:0;
+  box-shadow: 0 6px 18px rgba(16,185,129,0.12);
+}
+
+.btn.ghost{
+  background:transparent;
+  color:var(--muted);
+}
+
+.preview{
+  margin-top:18px;
+  padding-top:14px;
+  border-top:1px dashed rgba(255,255,255,0.03);
+}
+
+.preview-card{
+  display:flex;
+  gap:16px;
+  align-items:flex-start;
+  background:var(--glass);
+  padding:12px;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,0.02);
+}
+
+.preview-card img{
+  width:96px;
+  height:96px;
+  object-fit:cover;
+  border-radius:8px;
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border:1px solid rgba(255,255,255,0.03);
+}
+
+.meta{flex:1}
+.meta-row{margin-top:8px; font-size:13px; color:var(--muted); display:flex; gap:12px}
+strong{display:block; font-size:16px; margin-bottom:6px}
+.small{font-size:12px;padding:6px 10px;border-radius:8px}
+</style>
