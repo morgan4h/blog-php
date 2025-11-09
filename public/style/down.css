@@ -1,0 +1,61 @@
+
+/* App Detail Page */
+.app-detail {
+  padding: 60px 0;
+}
+.app-detail-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+}
+.app-detail-image img {
+  width: 120px;
+  height: 120px;
+  border-radius: 20px;
+}
+.app-detail-info {
+  max-width: 600px;
+  text-align: center;
+}
+.app-detail-info h2 {
+  font-size: 2rem;
+  color: #4c1d95;
+  margin-bottom: 10px;
+}
+.app-detail-info .category {
+  color: #7c3aed;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.app-detail-info .description {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 20px;
+}
+.app-meta {
+  text-align: left;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+.app-meta li {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+.download-btn {
+  font-size: 1rem;
+  padding: 14px 28px;
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .app-detail-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .app-detail-info {
+    text-align: left;
+  }
+}

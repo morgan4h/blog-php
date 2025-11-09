@@ -1,0 +1,22 @@
+{
+<<<<<<< HEAD
+  "name": "blog-sofia4h",
+  "version": "1.0.0",
+  "description": "place when you can downlaod everything realated to sofia 4h",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "morgan4h",
+=======
+  "name": "back-end-blog",
+  "version": "1.0.0",
+  "description": "back end of the blog sofai 4h",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+>>>>>>> bb4ff051da7375d4b24690166db3e436fd8dbcea
+  "license": "ISC"
+}

@@ -1,0 +1,165 @@
+/* Reset + Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f9f9ff;
+  color: #333;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Header */
+header {
+  background: #fff;
+  padding: 20px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.logo {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #7c3aed;
+}
+nav ul {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  text-transform: capitalize
+  ;
+}
+nav a {
+  font-weight: 500;
+  transition: color 0.2s;
+}
+nav a:hover {
+  color: #7c3aed;
+}
+
+/* Hero */
+.hero {
+  padding: 60px 0;
+  background: linear-gradient(to bottom right, #a78bfa, #7c3aed);
+  color: #fff;
+}
+.hero-content {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 40px;
+  align-items: center;
+}
+.hero-text {
+  text-align: center;
+}
+.hero-text h2 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+.hero-text p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+.btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  display: inline-block;
+}
+.btn.primary {
+  background: #fff;
+  color: #7c3aed;
+  transition: background 0.3s;
+}
+.btn.primary:hover {
+  background: #e9e9ff;
+}
+.hero-image img {
+  width: 250px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* App Section */
+.app-section {
+  padding: 60px 0;
+}
+.section-title {
+  font-size: 1.8rem;
+  color: #4c1d95;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.app-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 30px;
+}
+.app-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+.app-card:hover {
+  transform: translateY(-5px);
+}
+.app-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 16px;
+  margin-bottom: 15px;
+}
+.app-card h4 {
+  font-size: 1.1rem;
+  color: #4c1d95;
+  margin-bottom: 5px;
+}
+.app-card p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .hero-content {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+  .hero-text {
+    flex: 1;
+  }
+  .hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* Optional: Limit login form width */
+.app-detail-info {
+  max-width: 400px;
+  width: 100%;
+}
+

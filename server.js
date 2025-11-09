@@ -1,0 +1,1 @@
+location.href = "public/index.html";
