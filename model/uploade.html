@@ -1,10 +1,8 @@
 <!-- admin-app-form.html -->
 <main class="admin-main">
-  <form class="app-form" id="appForm" novalidate>
+  <form class="app-form" id="appForm" method="POST">
+    <div class="msg">All inputs is required</div>
     <h1 class="title">Add /  App</h1>
-
-
-
     <div class="row">
       <label for="name">App Name</label>
       <input id="name" name="name" type="text" placeholder="cheat engine - mod menu - anti black list tool" value="cheat engine - mod  menu - anti black list tool" required />
@@ -25,9 +23,8 @@
 
     <div class="row">
       <label for="picture">Category</label>
-      <input id="picture" name="picture" type="text" placeholder="category"  />  
+      <input id="picture" name="category" type="text" placeholder="category my/general"  />  
       </select>
-      <small class="hint">Hold Ctrl / Cmd to select multiple</small>
     </div>
 
     <div class="row">
