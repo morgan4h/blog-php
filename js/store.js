@@ -15,14 +15,16 @@ fetch(apiUrl)
     return response.json(); // Parse JSON data
   })
   .then(data => {
-    console.log("API data:", data);
+    // console.log("API data:", data);
+    
 
     // Clear existing dummy content
     appGrid.innerHTML = "";
 
     // Loop through keys in the JSON (ignore the 'name' property)
-    Object.keys(data).forEach(key => {
+    Object.keys(data).reverse().forEach(key => {
       if (!isNaN(key)) { // Only process numeric keys
+          if(data[key].type == location.search.slice(3)) {
         const app = data[key];
 
         const card = document.createElement("div");
@@ -36,6 +38,7 @@ fetch(apiUrl)
         `;
 
         appGrid.appendChild(card);
+          }
       }
     });
   })
