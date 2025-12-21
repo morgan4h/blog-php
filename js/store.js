@@ -1,48 +1,58 @@
-console.log('store.js');
+console.log("hi == world");
 
-// Replace with your actual API URL
+// ⚠️ Use http unless you have SSL configured
 const apiUrl = "http://localhost/server/blog/controll/store.php";
 
-// Select the container where the app cards should go
+// Container
 const appGrid = document.querySelector(".app-grid");
 
-// Fetch data from API
+// Get type from URL (?t=web)
+const params = new URLSearchParams(window.location.search);
+const filterType = params.get("t"); // example: web, mobile
+
 fetch(apiUrl)
   .then(response => {
     if (!response.ok) {
-      throw new Error("Network response was not ok: " + response.statusText);
+      throw new Error("HTTP error " + response.status);
     }
-    return response.json(); // Parse JSON data
+    return response.json();
   })
-  .then(data => {
-    // console.log("API data:", data);
-    
+  .then(result => {
+    console.log("API result:", result);
 
-    // Clear existing dummy content
+    // Validate API response
+    if (!result.success || !Array.isArray(result.data)) {
+      throw new Error("Invalid API format");
+    }
+
+    const apps = result.data;
+
     appGrid.innerHTML = "";
 
-    // Loop through keys in the JSON (ignore the 'name' property)
-    Object.keys(data).reverse().forEach(key => {
-      if (!isNaN(key)) { // Only process numeric keys
-          if(data[key].type == location.search.slice(3)) {
-        const app = data[key];
+    apps.reverse().forEach(app => {
+      // Filter by type if provided
+      if (filterType && app.type !== filterType) return;
 
-        const card = document.createElement("div");
-        card.classList.add("app-card");
+      const card = document.createElement("div");
+      card.className = "app-card";
 
-        card.innerHTML = `
-          <img src="${app.picture_app}" alt="${app.name} Icon">
-          <h4>${app.name}</h4>
-          <p>${app.category}</p>
-          <a href="${app.download_link}" class="btn primary" target="_blank">Download</a>
-        `;
+      card.innerHTML = `
+        <img src="${app.picture_app}" alt="${app.name} Icon">
+        <h4>${app.name}</h4>
+        <p>${app.category}</p>
+        <a href="${app.download_link}" class="btn primary" target="_blank">
+          Download
+        </a>
+      `;
 
-        appGrid.appendChild(card);
-          }
-      }
+      appGrid.appendChild(card);
     });
+
+    if (appGrid.innerHTML === "") {
+      appGrid.innerHTML = "<p>No apps found.</p>";
+    }
   })
   .catch(error => {
     console.error("Fetch error:", error);
-    appGrid.innerHTML = "<p>Failed to load apps. Please try again later.</p>";
+    appGrid.innerHTML = "<p>Failed to load apps.</p>";
   });

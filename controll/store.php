@@ -1,24 +1,32 @@
-<?php 
-
+<?php
 include_once 'db.php';
 
-$sql = "SELECT * FROM `app`";
-$result = mysqli_query($conn, $sql);
-$myApi = array(
-    'name' => "value",
-);
-if (mysqli_num_rows($result) > 0) {
-  // output data of each row
-  while($row = mysqli_fetch_assoc($result)) {
-    // echo  $row["name"] . " => ". $row['picture_app'] . "<br>";
-     $myApi[] = $row;
-  }
-} else {
-  echo "0 results";
-}
-
+// Tell the browser this is JSON
 header('Content-Type: application/json');
-echo json_encode($myApi, JSON_PRETTY_PRINT);
 
+$sql = "SELECT id, name, type, picture_app, category, description, version, size, download_link FROM app";
+$result = mysqli_query($conn, $sql);
+
+$apps = [];
+
+if ($result && mysqli_num_rows($result) > 0) {
+    while ($row = mysqli_fetch_assoc($result)) {
+        $apps[] = $row; // push each row as an object
+    }
+
+    echo json_encode([
+        "success" => true,
+        "count" => count($apps),
+        "data" => $apps
+    ], JSON_PRETTY_PRINT);
+
+} else {
+    echo json_encode([
+        "success" => false,
+        "count" => 0,
+        "data" => [],
+        "message" => "No results found"
+    ]);
+}
 
 mysqli_close($conn);
