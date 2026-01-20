@@ -1,7 +1,7 @@
 console.log("hi == world");
 
 // ⚠️ Use http unless you have SSL configured
-const apiUrl = "http://localhost/server/blog/controll/store.php";
+const apiUrl = "http://localhost/blog-php/controll/store.php";
 
 // Container
 const appGrid = document.querySelector(".app-grid");
