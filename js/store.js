@@ -1,58 +1,83 @@
-console.log("hi == world");
+// this function it's generate the template we need for the data
+function myAppTemplateFunction(myImage, myName, myType, myDown) {
 
-// ⚠️ Use http unless you have SSL configured
-const apiUrl = "http://localhost/blog-php/controll/store.php";
+  // 1️⃣ create main card
+  const appCard = document.createElement('div');
+  appCard.classList.add('app-card');
 
-// Container
-const appGrid = document.querySelector(".app-grid");
+  // 2️⃣ create image
+  const img = document.createElement('img');
+  img.src = myImage;
+  img.alt = myName;
 
-// Get type from URL (?t=web)
-const params = new URLSearchParams(window.location.search);
-const filterType = params.get("t"); // example: web, mobile
+  // 3️⃣ create title
+  const h4 = document.createElement('h4');
+  h4.textContent = myName;
 
-fetch(apiUrl)
-  .then(response => {
-    if (!response.ok) {
-      throw new Error("HTTP error " + response.status);
+  // 4️⃣ create type paragraph
+  const p = document.createElement('p');
+  p.textContent = myType;
+
+  // 5️⃣ append elements into card
+  appCard.appendChild(img);
+  appCard.appendChild(h4);
+  appCard.appendChild(p);
+
+  // 6️⃣ append card into container
+  try {
+    // console.log(myName)
+    const container = document.querySelector('.app-section .container');
+    container.appendChild(appCard);
+    appCard.onclick = function() {
+      location.href = myDown
     }
-    return response.json();
+  } catch (err) {
+    console.log('Container not found or DOM error');
+    console.error(err);
+  }
+}
+
+
+
+
+let url = "http://localhost/blog-php/controll/store.php"
+
+fetch(url)
+  .then(response => response.json())
+  .then(data => {
+    // console.log(data.data)
+    let countingForTheObject = Object.keys(data.data).length;
+    // console.log(Object.keys(data.data).length)
+    let querySerach = location.search.slice(3);
+
+
+    let found = false;
+
+    for (let i = 0; i < countingForTheObject; i++) {
+      if (querySerach === data.data[i].type) {
+        myAppTemplateFunction(
+          data.data[i].picture_app,
+          data.data[i].name,
+          data.data[i].type,
+          data.data[i].download_link
+        );
+        found = true;
+      }
+    }
+
+    if (!found) {
+      myAppTemplateFunction(
+        "https://www.nicepng.com/png/detail/135-1358116_error-png.png",
+        "error",
+        "tag not found",
+        ""
+      );
+    }
+
+
+
   })
-  .then(result => {
-    console.log("API result:", result);
+  .catch(error => console.error('Error:', error));
 
-    // Validate API response
-    if (!result.success || !Array.isArray(result.data)) {
-      throw new Error("Invalid API format");
-    }
 
-    const apps = result.data;
 
-    appGrid.innerHTML = "";
-
-    apps.reverse().forEach(app => {
-      // Filter by type if provided
-      if (filterType && app.type !== filterType) return;
-
-      const card = document.createElement("div");
-      card.className = "app-card";
-
-      card.innerHTML = `
-        <img src="${app.picture_app}" alt="${app.name} Icon">
-        <h4>${app.name}</h4>
-        <p>${app.category}</p>
-        <a href="${app.download_link}" class="btn primary" target="_blank">
-          Download
-        </a>
-      `;
-
-      appGrid.appendChild(card);
-    });
-
-    if (appGrid.innerHTML === "") {
-      appGrid.innerHTML = "<p>No apps found.</p>";
-    }
-  })
-  .catch(error => {
-    console.error("Fetch error:", error);
-    appGrid.innerHTML = "<p>Failed to load apps.</p>";
-  });

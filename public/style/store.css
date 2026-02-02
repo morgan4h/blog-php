@@ -20,6 +20,9 @@ ul {
   width: 90%;
   max-width: 1200px;
   margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 /* Header */
@@ -101,6 +104,8 @@ nav a:hover {
 .app-section {
   padding: 60px 0;
 }
+
+
 .section-title {
   font-size: 1.8rem;
   color: #4c1d95;
