@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sing up</title>
+  <link rel="stylesheet" href="../public/style/sing.css">
+</head>
+<body>
+
+  <div class="login-container">
+    <form class="login-card" method="POST">
+      <h2>Sing up</h2>
+           <div class="input-group">
+        <label>Name</label>
+        <input type="text" name="name" placeholder="Enter your Name" required>
+      </div>
+
+      <div class="input-group">
+        <label>Email</label>
+        <input type="text" name="email" placeholder="Enter your email" required>
+      </div>
+
+      <div class="input-group">
+        <label>Password</label>
+        <input type="password" name="ps" placeholder="Enter your password" required>
+      </div>
+
+         <div class="input-group">
+        <label>Confirm Password</label>
+        <input type="password" placeholder="Enter your password" required>
+      </div>
+
+      <button type="submit">Accept terms and continue</button>
+
+      <p class="signup-text">
+        Don’t have an account? <a href="login.php">Sign up</a>
+      </p>
+    </form>
+  </div>
+<script src="../js/sing.js"></script>
+</body>
+</html>
