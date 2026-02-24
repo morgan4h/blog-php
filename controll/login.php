@@ -33,7 +33,7 @@ if ($result->num_rows > 0) {
     // echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
     // echo $row['name'];
     if(@$email == $row['email'] && @$ps == $row['pswd']) {
-      setcookie("catchingLogin", $email, time() + 3600); // Expires in 1 hour
+      setcookie("catchingLogin", $email, time() + 3600,'/'); // Expires in 1 hour
       $okayMessage = "welcome your email is  " . $_COOKIE['catchingLogin'];
     }else {
       $notOkayMessage = "somethign went wrong";
