@@ -9,12 +9,12 @@
 
 // let send the data to the database
 
-$name = $_POST['name'];
-$email = $_POST['email'];
-$ps = $_POST['ps'];
+@$name = @$_POST['name'];
+@$email = @$_POST['email'];
+@$ps = @$_POST['ps'];
 
 // after you get the data send it 
-if(empty($name)) {
+if(empty(@$name)) {
     // echo "sorry";
 }else {
 $sql = "INSERT INTO `users` (`id`, `email`, `pswd`, `name`, `verfy`) VALUES (NULL, '$email', '$ps', '$name', 'no')";

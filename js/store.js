@@ -40,7 +40,7 @@ function myAppTemplateFunction(myImage, myName, myType, myDown) {
 
 
 
-let url = "http://localhost/blog-php/controll/store.php"
+let url = "http://localhost/s1/blog-php/controll/store.php"
 
 fetch(url)
   .then(response => response.json())

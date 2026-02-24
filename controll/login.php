@@ -1,12 +1,13 @@
 <?php
     include_once "../model/login.html";
     include_once "../controll/db.php";
+    include_once "../controll/global.php"
 ?>
 
 <?php
 
-$email = $_POST['email'];
-$ps = $_POST['ps'];
+@$email = $_POST['email'];
+@$ps = $_POST['ps'];
 
 ?>
 
@@ -17,8 +18,8 @@ $ps = $_POST['ps'];
 
 // check the information then allow login process
 
-$email = $_POST['email'];
-$ps = $_POST['ps'];
+$email = @$_POST['email'];
+$ps = @$_POST['ps'];
 
 
 $sql = "SELECT * FROM `users`";
@@ -31,10 +32,11 @@ if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
     // echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
     // echo $row['name'];
-    if($email == $row['email'] && $ps == $row['pswd']) {
-      echo "welcome";
+    if(@$email == $row['email'] && @$ps == $row['pswd']) {
+      setcookie("catchingLogin", $email, time() + 3600); // Expires in 1 hour
+      $okayMessage = "welcome your email is  " . $_COOKIE['catchingLogin'];
     }else {
-      echo "somethign went wrong";
+      $notOkayMessage = "somethign went wrong";
     }
   }
 } else {
@@ -44,3 +46,13 @@ if ($result->num_rows > 0) {
 
 
 ?>
+
+<script>
+  let myTitle = document.querySelector("h2")
+  myTitle.textContent = '<?php echo $okayMessage OR $notOkayMessage ?>'
+  if (myTitle.textContent == 1) {
+     myTitle.textContent = '<?php echo $okayMessage ?>'
+  }else {
+    console.log('bad')
+  }
+</script>
