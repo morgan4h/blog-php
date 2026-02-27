@@ -18,27 +18,18 @@ function routing($addr)
     } else if ($addr == 'blog') {
         header('Location: ../public/pages/sphone.html');
     } else if ($addr == 'email') {
-        $to = "example@example.com";  // The recipient's email address
-        $subject = "Your Subject Here"; // The subject of the email
-        $body = "This is the body of the email."; // The email body
-
-        // Encode the variables to ensure proper formatting in the URL
-        $to = urlencode($to);
-        $subject = urlencode($subject);
-        $body = urlencode($body);
-
-        // Create the mailto link
-        $mailToLink = "mailto:$to?subject=$subject&body=$body";
-
-        // Redirect the user to the mailto link
-        header("Location: $mailToLink");
-        exit();
+        echo "make this working lazy man ?!";
     }else if ($addr == 'my') {
         header('Location: ../public/pages/store.html?b=my');
     }else if ($addr == 'general') {
         header('Location: ../public/pages/store.html?b=general');
+    }else if ($addr == 'upload') {
+        header('Location: ../controll/upload.php');
+    }else if ($addr == 'profile') {
+        header('Location: ../model/profile.html');
     }
     else {
+        
         //   header('Location: ../public/index.html');
     }
 }

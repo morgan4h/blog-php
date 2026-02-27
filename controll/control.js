@@ -24,7 +24,7 @@ if (typeof (document.cookie) == 'string' && document.cookie.length > 4) {
   console.log('hello world')
   // location.href = '../model/profile.html'
   document.querySelector('.login').textContent = 'Profile'
-  document.querySelector('.login').href = '../model/profile.html'
+  document.querySelector('.login').href = '../controll/routing.php?route=profile'
 } else {
   console.log('this is not working well!')
 }

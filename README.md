@@ -1,1 +1,1 @@
-#create way to connect the functions of the php with the html (checkiflogin)
+#we stop at store page edit the css and if soemthign missing to fix it
