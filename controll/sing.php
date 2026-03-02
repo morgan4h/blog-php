@@ -20,7 +20,7 @@ if(empty(@$name)) {
 $sql = "INSERT INTO `users` (`id`, `email`, `pswd`, `name`, `verfy`) VALUES (NULL, '$email', '$ps', '$name', 'no')";
 
 if ($conn->query($sql) === TRUE) {
-  echo "New record created successfully";
+    header('Location: login.php');
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }

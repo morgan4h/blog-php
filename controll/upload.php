@@ -9,7 +9,7 @@ $msg = "";
 
 // Include database config
 include_once '../controll/db.php';
-
+include_once '../controll/lock.php';
 // Only process POST request
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 

@@ -1,1 +1,1 @@
-#we stop at store page edit the css and if soemthign missing to fix it
+next work on the functionality of the site and edit the routing create apis for the app to be more intrictive and usefull

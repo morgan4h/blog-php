@@ -35,6 +35,8 @@ if ($result->num_rows > 0) {
     if(@$email == $row['email'] && @$ps == $row['pswd']) {
       setcookie("catchingLogin", $email, time() + 3600,'/'); // Expires in 1 hour
       $okayMessage = "welcome your email is  " . $_COOKIE['catchingLogin'];
+      header("Location: ../index.html");
+      exit();
     }else {
       $notOkayMessage = "somethign went wrong";
     }
@@ -52,6 +54,7 @@ if ($result->num_rows > 0) {
   myTitle.textContent = '<?php echo $okayMessage OR $notOkayMessage ?>'
   if (myTitle.textContent == 1) {
      myTitle.textContent = '<?php echo $okayMessage ?>'
+    //  location.href = '../index.html'
   }else {
     console.log('bad')
   }
