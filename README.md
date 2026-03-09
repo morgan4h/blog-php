@@ -1,6 +1,6 @@
 # SOFAI 4H Blog
 
-![SOFAI 4H Banner](https://via.placeholder.com/800x200?text=SOFAI+4H+Blog)
+![SOFAI 4H Banner](https://yt3.googleusercontent.com/3aI0s21R4qqBAZ-CrNPoItB254N1mFV1Sjy9xcXRXMAMCdd6X70CiPXk77bE_fL7H7y_EY1CtQ=s160-c-k-c0x00ffffff-no-rj)
 
 Welcome to **SOFAI 4H Blog**, a dynamic platform where you can find the latest projects, courses, blogs, and community resources related to gaming, hacking, software tools, and privacy.
 
