@@ -144,6 +144,7 @@ nav a:hover {
 }
 
 .app-card {
+  cursor: pointer;
   background: #1a1a1d;
   padding: 25px;
   border-radius: 15px;
