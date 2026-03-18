@@ -161,21 +161,19 @@
 <div class="container">
   <header>
     <div class="profile-pic-container">
-      <img src="https://picsum.photos/400" class="profile-pic" alt="Profile">
+      <img src="https://static.vecteezy.com/system/resources/thumbnails/072/217/525/small/cute-black-cat-illustration-halloween-theme-big-shiny-eyes-furry-pet-character-orange-geometric-background-creative-poster-and-decoration-art-vector.jpg" class="profile-pic" alt="Profile">
     </div>
     
     <div class="profile-info">
       <div class="top-row">
         <div class="username">beni.design.vibe</div>
-        <button class="btn">Message</button>
-        <button class="btn">Follow</button>
           <button class="btn">Log Out</button>
       </div>
 
       <ul class="stats">
-        <li><span>42</span> posts</li>
-        <li><span>100K</span> followers</li>
-        <li><span>892</span> following</li>
+        <li><span>0</span> posts</li>
+        <li><span>0</span> followers</li>
+        <li><span>0</span> following</li>
       </ul>
 
       <div class="bio">
@@ -187,7 +185,7 @@
 
   <main class="grid">
     <!-- 9 boxes as requested -->
-    <div class="post-box"><img src="https://picsum.photos/501"></div>
+    <!-- <div class="post-box"><img src="https://picsum.photos/501"></div>
     <div class="post-box"><img src="https://picsum.photos/502"></div>
     <div class="post-box"><img src="https://picsum.photos/503"></div>
     <div class="post-box"><img src="https://picsum.photos/504"></div>
@@ -195,7 +193,7 @@
     <div class="post-box"><img src="https://picsum.photos/506"></div>
     <div class="post-box"><img src="https://picsum.photos/507"></div>
     <div class="post-box"><img src="https://picsum.photos/508"></div>
-    <div class="post-box"><img src="https://picsum.photos/509"></div>
+    <div class="post-box"><img src="https://picsum.photos/509"></div> -->
   </main>
 </div>
 <script>
@@ -204,6 +202,24 @@
   if(document.cookie.length > 18) {
     theName.textContent = document.cookie.slice(14, 18).toLowerCase();
     document.querySelector('.bio-name').textContent = document.cookie.slice(14, 18) + " Profile."
+  }
+  document.querySelector('.btn').onclick = function() {
+        // Clear all cookies for the current domain
+    document.cookie.split(";").forEach(function(cookie) {
+        const eqPos = cookie.indexOf("=");
+        const name = eqPos > -1 ? cookie.substr(0, eqPos).trim() : cookie.trim();
+        // Set cookie expiry date to past to delete it
+        document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/";
+    });
+
+    // Clear all localStorage data
+    localStorage.clear();
+
+    // Optionally, clear sessionStorage as well
+    sessionStorage.clear();
+    location.href = '../../index.html'
+    console.log('jh')
+    console.log("All cookies, localStorage, and sessionStorage have been cleared.");
   }
 </script>
 </body>

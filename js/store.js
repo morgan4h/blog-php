@@ -40,7 +40,7 @@ function myAppTemplateFunction(myImage, myName, myType, myDown) {
 
 
 
-let url = "http://localhost/s1/blog-php/controll/store.php"
+let url = "../../controll/store.php"
 
 fetch(url)
   .then(response => response.json())
@@ -58,7 +58,7 @@ fetch(url)
         myAppTemplateFunction(
           data.data[i].picture_app,
           data.data[i].name,
-          data.data[i].type,
+          data.data[i].description,
           data.data[i].download_link
         );
         found = true;
@@ -83,7 +83,7 @@ fetch(url)
 
 
 if (typeof (document.cookie) == 'string' && document.cookie.length > 4) {
-  console.log('hello world')
+  // console.log('hello world')
   // location.href = '../model/profile.html'
   document.querySelector('.login').textContent = document.cookie.slice(14,18)
   document.querySelector('.login').href = '../../controll/routing.php?route=profile'

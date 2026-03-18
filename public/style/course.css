@@ -205,3 +205,207 @@ footer {
     color: var(--text-muted);
     font-size: 0.9rem;
 }
+
+
+/* --- Responsive Design --- */
+
+/* Tablets and Small Desktops (under 1024px) */
+@media (max-width: 1024px) {
+    header {
+        padding: 1.2rem 4%;
+    }
+    
+    main {
+        margin: 2rem auto;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Mobile Phones (under 768px) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 1.2rem;
+        padding: 1.5rem 20px;
+        text-align: center;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    nav a {
+        margin: 0;
+        font-size: 1rem;
+    }
+
+    .join-button {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    /* Course Grid Adjustments */
+    .course-grid {
+        grid-template-columns: 1fr; /* Stack cards vertically */
+        gap: 20px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .membership-style-text {
+        margin-bottom: 2.5rem;
+    }
+
+    /* Membership CTA Box */
+    .membership-cta {
+        padding: 2rem 1.5rem;
+        margin-top: 3rem;
+    }
+
+    .membership-cta h3 {
+        font-size: 1.4rem;
+    }
+
+    .big-join-button {
+        padding: 1rem 1.5rem;
+        font-size: 0.95rem;
+        width: 100%;
+    }
+}
+
+/* --- CUSTOM MOBILE OVERHAUL --- */
+
+@media (max-width: 768px) {
+    /* 1. Header & Nav: Modern Stacked UI */
+    header {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 0.8rem;
+        border-bottom: 2px solid var(--primary-purple);
+    }
+
+    .logo {
+        font-size: 1.2rem;
+        text-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        width: 100%;
+    }
+
+    nav a {
+        margin: 0;
+        font-size: 0.75rem; /* Small & sleek */
+        letter-spacing: 1px;
+    }
+
+    .join-button {
+        padding: 0.5rem 1rem;
+        font-size: 0.7rem;
+        border-radius: 6px;
+    }
+
+    /* 2. Main Section: Better Spacing */
+    main {
+        margin: 1.5rem auto;
+        padding: 0 15px;
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Stop text wrapping awkwardly */
+        line-height: 1.2;
+    }
+
+    .membership-style-text {
+        font-size: 0.85rem;
+        margin-bottom: 2rem;
+        padding: 0 10px;
+    }
+
+    /* 3. Course Cards: Compact "App" Style */
+    .course-grid {
+        grid-template-columns: 1fr; /* Single column for focus */
+        gap: 25px;
+    }
+
+    .course-card {
+        border-radius: 15px;
+    }
+
+    .image-container {
+        height: 140px; /* Much smaller height for phones */
+    }
+
+    .course-card h3 {
+        font-size: 1rem;
+        padding: 1rem 1rem 0.3rem;
+        color: var(--accent-purple);
+    }
+
+    .course-card p {
+        font-size: 0.8rem;
+        padding: 0 1rem 1rem;
+        line-height: 1.4;
+    }
+
+    /* 4. Buttons: Full Width for Thumbs */
+    .btn {
+        margin: 0 1rem 1rem;
+        padding: 0.6rem;
+        font-size: 0.85rem;
+    }
+
+    /* 5. Membership CTA: The "Mobile Card" Look */
+    .membership-cta {
+        margin-top: 3rem;
+        padding: 2rem 1.2rem;
+        border-radius: 15px;
+        background: linear-gradient(180deg, #1a1625 0%, #0b0a0f 100%);
+    }
+
+    .membership-cta h3 {
+        font-size: 1.2rem;
+    }
+
+    .membership-cta p {
+        font-size: 0.8rem;
+        margin-top: 5px;
+    }
+
+    .big-join-button {
+        width: 100%; /* Easy to hit with thumb */
+        padding: 1rem;
+        font-size: 0.9rem;
+        border-radius: 12px;
+    }
+
+    /* 6. Footer */
+    footer {
+        padding: 2rem 1rem;
+        font-size: 0.75rem;
+    }
+}
+
+/* 7. Extra Fix for tiny screens (iPhone SE) */
+@media (max-width: 380px) {
+    nav {
+        gap: 8px;
+    }
+    
+    nav a {
+        font-size: 0.65rem;
+    }
+}

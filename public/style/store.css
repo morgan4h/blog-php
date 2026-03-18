@@ -126,8 +126,13 @@ nav a:hover {
 /* ============================= */
 
 .app-section {
-  padding: 60px 0;
-  background-color: #111;
+  padding-top: 20px;
+  display: flex;
+  height: 60%;
+  width: 60%;
+  background-color: #1a0f2e;
+  margin: auto;
+  justify-content: start;
 }
 
 .section-title {
@@ -137,27 +142,19 @@ nav a:hover {
   color: #a855f7;
 }
 
-.app-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 30px;
-}
 
 .app-card {
   cursor: pointer;
-  background: #1a1a1d;
-  padding: 25px;
-  border-radius: 15px;
+  background-color: #1f1f1f;
+  width: fit-content;
+  height: fit-content;
   text-align: center;
-  transition: 0.3s ease;
-  border: 1px solid #222;
+  margin: auto;
+  margin-bottom: 4%;
+  padding: 10px;
+  border-radius: 10px;
 }
 
-.app-card:hover {
-  transform: translateY(-8px);
-  border-color: #a855f7;
-  box-shadow: 0 10px 30px rgba(168, 85, 247, 0.3);
-}
 
 .app-card img {
   width: 80px;
@@ -179,17 +176,74 @@ nav a:hover {
 /*        Responsive             */
 /* ============================= */
 
+/* ============================= */
+/* Responsive Design        */
+/* ============================= */
+
 @media (max-width: 768px) {
-  .hero-content {
+  /* Navigation Bar: Stack Logo and Menu */
+  .nav {
     flex-direction: column;
+    gap: 15px;
     text-align: center;
   }
 
+  nav ul {
+    gap: 15px;
+    padding: 0;
+    justify-content: center;
+    flex-wrap: wrap; /* Prevents menu items from overlapping */
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+
+  /* Hero Section: Stack text and image */
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
   .hero-image {
-    margin-top: 30px;
+    order: -1; /* Puts image above text on mobile */
   }
 
   .hero-text h2 {
     font-size: 28px;
+  }
+
+  /* App Section Flex Fix: Ensure cards wrap and stay centered */
+  .app-section {
+    width: 95%; /* Take more width on small screens */
+    height: auto; /* Remove fixed height for mobile */
+    flex-wrap: wrap; /* CRITICAL: Allows cards to go to next line */
+    justify-content: center; /* Centers the cards */
+    gap: 15px;
+  }
+
+  .app-card {
+    margin: 5px; /* Adjust spacing for mobile */
+    width: 140px; /* Force smaller cards on phone */
+    margin: auto;
+    margin-bottom: 30px;
+  }
+  
+  .app-card img {
+    width: 60px; /* Smaller icons for phone */
+  }
+}
+
+/* Extra small phones adjustment */
+@media (max-width: 400px) {
+  nav ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2x2 grid for links */
+    gap: 10px;
+  }
+
+  .logo {
+    font-size: 20px;
   }
 }

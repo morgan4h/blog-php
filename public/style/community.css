@@ -279,9 +279,262 @@ footer {
 }
 
 /* --- Responsive Design --- */
+/* ================================================= */
+/* CUSTOM MOBILE OVERHAUL (768px and below)          */
+/* ================================================= */
+
 @media (max-width: 768px) {
-    h1 { font-size: 2.5rem; }
-    .vip-box { padding: 2rem; }
-    .app-container { text-align: center; gap: 30px; }
-    header { padding: 1rem 5%; }
+    /* 1. Header: Stacked for clarity */
+    header {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    nav {
+        display: flex;
+        gap: 12px;
+        margin-bottom: 5px;
+    }
+
+    nav a {
+        margin: 0;
+        font-size: 0.8rem;
+    }
+
+    /* 2. Main Typography: Fix massive gradients */
+    main {
+        margin: 2rem auto;
+    }
+
+    h1 {
+        font-size: 2.2rem; /* Shrunk so it doesn't overflow */
+        padding: 0 10px;
+    }
+
+    .membership-style-text {
+        font-size: 1rem;
+        margin-bottom: 3rem;
+        padding: 0 15px;
+    }
+
+    /* 3. Community Section: Grid spacing */
+    .community-section {
+        margin-bottom: 5rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+        margin-bottom: 2rem;
+    }
+
+    /* 4. Social Cards: Compact list style */
+    .link-grid {
+        grid-template-columns: 1fr; /* Stack vertically */
+        gap: 15px;
+    }
+
+    .link-card {
+        padding: 2rem 1.5rem; /* Less air, more focus */
+    }
+
+    .link-card i {
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
+    }
+
+    /* 5. VIP Box: Mobile Card Layout */
+    .vip-box {
+        padding: 2.5rem 1.5rem;
+        text-align: center; /* Center for mobile thumb reach */
+        border-radius: 18px;
+    }
+
+    .vip-badge {
+        left: 50%;
+        transform: translateX(-50%); /* Centered badge */
+        font-size: 0.65rem;
+    }
+
+    .vip-box h3 {
+        font-size: 1.5rem;
+        margin-top: 10px;
+    }
+
+    .vip-box ul {
+        margin: 1.5rem 0;
+        display: inline-block;
+        text-align: left; /* Keep bullets aligned but container centered */
+    }
+
+    .vip-box li {
+        font-size: 0.95rem;
+    }
+
+    .btn-premium {
+        width: 100%;
+        padding: 0.8rem;
+    }
+
+    /* 6. App Preview: Fix scaling */
+    .app-container {
+        flex-direction: column; /* Phone on top, text below */
+        gap: 40px;
+    }
+
+    .phone-frame {
+        width: 180px; /* Smaller phone for mobile screen */
+        height: 380px;
+    }
+
+    .app-container .text-content {
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    /* 7. Footer */
+    footer {
+        padding: 2.5rem 1rem;
+        font-size: 0.8rem;
+    }
+}
+/* ================================================= */
+/* CUSTOM MOBILE OVERHAUL (768px and below)          */
+/* ================================================= */
+
+@media (max-width: 768px) {
+    /* 1. Header: Stacked for clarity */
+    header {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    nav {
+        display: flex;
+        gap: 12px;
+        margin-bottom: 5px;
+    }
+
+    nav a {
+        margin: 0;
+        font-size: 0.8rem;
+    }
+
+    /* 2. Main Typography: Fix massive gradients */
+    main {
+        margin: 2rem auto;
+    }
+
+    h1 {
+        font-size: 2.2rem; /* Shrunk so it doesn't overflow */
+        padding: 0 10px;
+    }
+
+    .membership-style-text {
+        font-size: 1rem;
+        margin-bottom: 3rem;
+        padding: 0 15px;
+    }
+
+    /* 3. Community Section: Grid spacing */
+    .community-section {
+        margin-bottom: 5rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+        margin-bottom: 2rem;
+    }
+
+    /* 4. Social Cards: Compact list style */
+    .link-grid {
+        grid-template-columns: 1fr; /* Stack vertically */
+        gap: 15px;
+    }
+
+    .link-card {
+        padding: 2rem 1.5rem; /* Less air, more focus */
+    }
+
+    .link-card i {
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
+    }
+
+    /* 5. VIP Box: Mobile Card Layout */
+    .vip-box {
+        padding: 2.5rem 1.5rem;
+        text-align: center; /* Center for mobile thumb reach */
+        border-radius: 18px;
+    }
+
+    .vip-badge {
+        left: 50%;
+        transform: translateX(-50%); /* Centered badge */
+        font-size: 0.65rem;
+    }
+
+    .vip-box h3 {
+        font-size: 1.5rem;
+        margin-top: 10px;
+    }
+
+    .vip-box ul {
+        margin: 1.5rem 0;
+        display: inline-block;
+        text-align: left; /* Keep bullets aligned but container centered */
+    }
+
+    .vip-box li {
+        font-size: 0.95rem;
+    }
+
+    .btn-premium {
+        width: 100%;
+        padding: 0.8rem;
+    }
+
+    /* 6. App Preview: Fix scaling */
+    .app-container {
+        flex-direction: column; /* Phone on top, text below */
+        gap: 40px;
+    }
+
+    .phone-frame {
+        width: 180px; /* Smaller phone for mobile screen */
+        height: 380px;
+    }
+
+    .app-container .text-content {
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    /* 7. Footer */
+    footer {
+        padding: 2.5rem 1rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* 8. Fix for very small phones (iPhone SE) */
+@media (max-width: 400px) {
+    h1 { font-size: 1.8rem; }
+    
+    nav a {
+        font-size: 0.7rem;
+    }
+
+    .vip-box h3 {
+        font-size: 1.3rem;
+    }
 }

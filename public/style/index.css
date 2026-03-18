@@ -148,3 +148,83 @@ footer p {
 
 /* the sphone style */
 
+/* --- Responsive Design (Mobile & Tablets) --- */
+
+@media (max-width: 768px) {
+    /* 1. Navigation: Stack items or adjust spacing */
+    nav {
+        flex-direction: column;
+        padding: 1.5rem 1rem;
+        gap: 15px;
+    }
+
+    .links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .links a {
+        margin-left: 0;
+        margin: 0 5px;
+        font-size: 0.9rem;
+    }
+
+    /* 2. Header/Hero: Make video full width */
+    header {
+        padding: 40px 15px;
+    }
+
+    header h2 {
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+    }
+
+    header .image iframe {
+        width: 100%; /* Video fills the screen width on mobile */
+        height: 250px; /* Reduced height for smaller screens */
+    }
+
+    /* 3. Offers Section: Adjust Grid */
+    .offers {
+        padding: 30px 20px;
+        grid-template-columns: 1fr; /* Force single column on small phones */
+        gap: 1.5rem;
+    }
+
+    .article {
+        padding: 20px;
+    }
+
+    .article p {
+        height: auto; /* Let text flow naturally on mobile */
+        margin-bottom: 15px;
+    }
+
+    /* 4. Footer: Stack links for readability */
+    footer .short-links, 
+    footer .connect, 
+    footer .links {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 30px;
+    }
+
+    footer a {
+        margin: 0;
+        font-size: 1rem;
+    }
+}
+
+/* Extra Small Devices (iphones/small androids) */
+@media (max-width: 480px) {
+    nav h1 {
+        font-size: 1.2rem;
+    }
+    
+    header h2 {
+        font-size: 1.1rem;
+    }
+}
