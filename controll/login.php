@@ -33,9 +33,12 @@ if ($result->num_rows > 0) {
     // echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
     // echo $row['name'];
     if(@$email == $row['email'] && @$ps == $row['pswd']) {
-      setcookie("catchingLogin", $email, time() + 3600,'/'); // Expires in 1 hour
-      $okayMessage = "welcome your email is  " . $_COOKIE['catchingLogin'];
-      header("Location: ../index.html");
+      setcookie("tokenLogin", $ps, time() + 3600,'/'); // Expires in 1 hour
+        setcookie("email", $email, time() + 3600,'/'); // Expires in 1 hour
+            setcookie("name", $row['name'], time() + 3600,'/'); // Expires in 1 hour
+            setcookie("va", $row['verfy'], time() + 3600,'/'); // Expires in 1 hour
+      $okayMessage = "welcome your email is  " . $_COOKIE['tokenLogin'];
+      header("Location: ../public/index.html");
       exit();
     }else {
       $notOkayMessage = "somethign went wrong";

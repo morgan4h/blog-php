@@ -20,11 +20,3 @@ addEventListener("click", function (e) {
 
 // read the cookie and show the user profile
 
-if (typeof (document.cookie) == 'string' && document.cookie.length > 4) {
-  // console.log('hello world')
-  // location.href = '../model/profile.html'
-  document.querySelector('.login').textContent = document.cookie.slice(14,18)
-  document.querySelector('.login').href = '../controll/routing.php?route=profile'
-} else {
-  console.log('this is not working well!')
-}
