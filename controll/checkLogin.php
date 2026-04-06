@@ -23,7 +23,7 @@ function checkLogin($action) {
     // TODO FIX THE SUCCESSFUL MEssage not show up
    $users = array();
    array_push($users,$action);
-//    var_dump($users);
+   var_dump($users);
    if(in_array('good',$users)) {
     header('Content-Type: application/json');
        $good = array('state' => 'successfully', 'code' => '200', 'message' => 'you successfully login to your accont!');
@@ -58,10 +58,11 @@ if ($result->num_rows > 0) {
       
     //   $okayMessage = "welcome your email is  " . $_COOKIE['tokenLogin'];
     $callFunction = 1;
+    break;
     
       
     //   header("Location: ../public/index.html");
-      exit();
+      // exit();
     }else {
       $notOkayMessage = "not login";
     //   echo $notOkayMessage;
