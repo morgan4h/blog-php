@@ -20,13 +20,18 @@
 
 
 function checkLogin($action) {
-    // TODO FIX THE SUCCESSFUL MEssage not show up
    $users = array();
    array_push($users,$action);
-   var_dump($users);
+  //  var_dump($users);
    if(in_array('good',$users)) {
     header('Content-Type: application/json');
-       $good = array('state' => 'successfully', 'code' => '200', 'message' => 'you successfully login to your accont!');
+       $good = array('state' => 'successfully',
+        'code' => '200', 
+        'message' => 'you successfully login to your accont!',
+        'username' => $_COOKIE['name'],
+        'email' => $_COOKIE['email'],
+        'verfy' => $_COOKIE['va']
+      );
        echo json_encode($good);
    }else {
     header('Content-Type: application/json');

@@ -20,3 +20,24 @@ addEventListener("click", function (e) {
 
 // read the cookie and show the user profile
 
+fetch("https://sofiai4h-youtube.rf.gd/blog/controll/checkLogin.php")
+.then(response => {
+  if (!response.ok) {
+    throw new Error("Network response was not ok");
+  }
+  return response.json(); // parse JSON
+})
+.then(data => {
+  console.log(data.code); // use the data
+  if(data.code == '200') {
+    console.log('update the login information')
+    document.querySelector('nav .login').textContent = data.username
+    document.querySelector('nav .login').href = '../model/profile.html' 
+  }else {
+    console.log('not going to update anything at all')
+  }
+})
+.catch(error => {
+  console.error("Error:", error);
+});
+console.log('i see you (')
