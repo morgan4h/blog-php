@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 // Bind parameters (8 strings)
                 $stmt->bind_param(
-                    "ssssssss",
+                    null,
                     $name,
                     $type,
                     $picture,
