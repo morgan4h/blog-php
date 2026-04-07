@@ -15,7 +15,9 @@ if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         
         if($_COOKIE['email'] == $row['email']) {
-            echo 'login fine';
+            echo 'you are  admin';
+        }else {
+            echo "sorry this user not admin";
         }
     }
 } else {
