@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Lost in Space</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #0f0c29; /* Dark space background */
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            z-index: 1;
+        }
+
+        /* 404 Text Styling */
+        .error-code {
+            font-size: clamp(8rem, 20vw, 12rem);
+            font-weight: 900;
+            color: #a29bfe; /* Light Purple */
+            margin-bottom: 0;
+            line-height: 1;
+            text-shadow: 0 0 30px rgba(162, 155, 254, 0.5);
+            animation: float 4s ease-in-out infinite;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #efedff;
+            letter-spacing: 1px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #b2bec3;
+            max-width: 450px;
+            margin: 0 auto 40px;
+            line-height: 1.6;
+        }
+
+        /* Purple Button Styling */
+        .home-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background-color: #6c5ce7; /* Vibrant Purple */
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(108, 92, 231, 0.3);
+        }
+
+        .home-btn:hover {
+            background-color: #8275e9;
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(108, 92, 231, 0.5);
+        }
+
+        /* Animation for the 404 */
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) rotate(-1deg);
+            }
+            50% {
+                transform: translateY(-25px) rotate(1deg);
+            }
+        }
+
+        /* Decorative Background Glow */
+        .glow {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: #6c5ce7;
+            filter: blur(150px);
+            opacity: 0.2;
+            border-radius: 50%;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="glow"></div>
+    
+    <main class="container">
+        <div class="error-content">
+            <h1 class="error-code">404</h1>
+            <h2>Lost in the Void</h2>
+            <p>The page you are looking for has drifted out of orbit. Let's get you back to familiar territory.</p>
+            <a href="/" class="home-btn">Return to Base</a>
+        </div>
+    </main>
+</body>
+</html>

@@ -10,6 +10,7 @@ $msg = "";
 // Include database config
 include_once '../controll/db.php';
 include_once '../controll/lock.php';
+
 // Only process POST request
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
@@ -39,10 +40,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $msg = "⚠️ Please fill in all fields!";
         } else {
 
-            // Prepare SQL statement (FIXED)
+            // Prepare SQL statement
             $stmt = $conn->prepare("
-                INSERT INTO `app`
-                (`name`, `type`, `picture_app`, `category`, `description`, `version`, `size`, `download_link`)
+                INSERT INTO `app` 
+                (`name`, `type`, `picture_app`, `category`, `description`, `version`, `size`, `download_link`) 
                 VALUES (?, ?, ?, ?, ?, ?, ?, ?)
             ");
 
@@ -50,9 +51,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $msg = "❌ Prepare failed: " . $conn->error;
             } else {
 
-                // Bind parameters (8 strings)
+                // FIXED: The first argument must be the types string "ssssssss" (8 strings)
+                // Removed the 'null' argument you had previously.
                 $stmt->bind_param(
-                    null,
+                    "ssssssss", 
                     $name,
                     $type,
                     $picture,
@@ -66,6 +68,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 // Execute
                 if ($stmt->execute()) {
                     $msg = "✅ App added successfully!";
+                    // Optional: Clear POST data so form empties on success
+                    $_POST = array(); 
                 } else {
                     $msg = "❌ Insert failed: " . $stmt->error;
                 }
@@ -73,7 +77,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $stmt->close();
             }
         }
-
         $conn->close();
     }
 }
