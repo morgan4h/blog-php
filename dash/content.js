@@ -1,19 +1,21 @@
-// let mainColor = document.querySelector('input')
-// document.querySelector('button').onclick = function () {
-//     console.log(mainColor.value)
-//     document.querySelector('#homePage').style.background = mainColor.value
-// }
 
-// let valueOfLinkVideo = document.querySelector('.linkVideo')
-
-// document.querySelector('.upload').onclick = function () {
-//     console.log(valueOfLinkVideo.value)
-//     // https://www.youtube.com/embed/wc3OjMY7qs0
-//     document.querySelector('iframe').src = valueOfLinkVideo.value
-// }
-
-// here one page going to controll the page that we havae and the page that we set from so we need to find way to skipe error n js to loead the code proporly thr right way
-
-let titleOfTheHomePage = document.querySelector('#homePage')
-
-console.log(titleOfTheHomePage)
+fetch('https://sofiai4h-youtube.rf.gd/blog/dash/content.json')
+    .then(function (response) {
+        // Check if the request was successful
+        if (response.ok) {
+            return response.json();
+        }
+        throw new Error('Something went wrong');
+    })
+    .then(function (data) {
+        // Use the data here
+        console.log("User page:", data.pagename);
+        document.title = data.pagename
+        console.log("User change:", data.change);
+        document.querySelector('iframe').src = data.change
+    })
+    .catch(function (error) {
+        // Handle any errors (network or logic)
+        console.error("Error:", error);
+    });
+    

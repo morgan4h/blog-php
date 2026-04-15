@@ -1,7 +1,7 @@
 
 
 addEventListener("click", function (e) {
-  console.log(e.target);
+  //console.log(e.target);
   if (e.target.alt == "project image") {
     // this.location.href = "../controll/routing.php?route=lp";
   } else if (e.target.alt == "blog") {
@@ -11,7 +11,7 @@ addEventListener("click", function (e) {
   } else if (e.target.alt == "Community") {
     this.location.href = "../controll/routing.php?route=community";
   } else {
-    console.log("back to home page, can't find direction (:");
+    //console.log("back to home page, can't find direction (:");
   }
 });
 
@@ -28,16 +28,16 @@ fetch("https://sofiai4h-youtube.rf.gd/blog/controll/checkLogin.php")
   return response.json(); // parse JSON
 })
 .then(data => {
-  console.log(data.code); // use the data
+  //console.log(data.code); // use the data
   if(data.code == '200') {
-    console.log('update the login information')
+    //console.log('update the login information')
     document.querySelector('nav .login').textContent = data.username
     document.querySelector('nav .login').href = '../model/profile.html' 
   }else {
-    console.log('not going to update anything at all')
+    //console.log('not going to update anything at all')
   }
 })
 .catch(error => {
   console.error("Error:", error);
 });
-console.log('i see you (')
+//console.log('i see you (')
