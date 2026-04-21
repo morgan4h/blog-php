@@ -1,7 +1,24 @@
 <?php
+$filename = 'content.json';
 
-// change the content of the page
+// 1. Read the file
+$jsonData = file_get_contents($filename);
 
+// 2. Decode JSON into a PHP associative array
+$data = json_decode($jsonData, true);
+
+// 3. Update the values
+$data['pagename'] = "Home";
+$data['change'] = "https://www.youtube.com/embed/vuhdNaJ4cko";
+
+// 4. Encode back to JSON
+// Use JSON_PRETTY_PRINT to keep the file readable for humans
+$newJsonData = json_encode($data, JSON_PRETTY_PRINT);
+
+// 5. Save the updated content back to the file
+file_put_contents($filename, $newJsonData);
+
+echo "JSON file updated successfully!";
 ?>
 
 <!DOCTYPE html>
@@ -22,9 +39,5 @@
     <h2>change the link of the main video on the home page</h2>
     <input type="text" class="linkVideo">
     <button class="upload">upload</button>
-    <hr>
-    <iframe src="../public/index.html" frameborder="0"></iframe>
-    <hr>
-    <script src="../dash/content.js"></script>
 </body>
 </html>
