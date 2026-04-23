@@ -9,7 +9,7 @@ $data = json_decode($jsonData, true);
 
 // 3. Update the values
 $data['pagename'] = "Home";
-$data['change'] = "https://www.youtube.com/embed/vuhdNaJ4cko";
+$data['change'] = $_POST['link'];
 
 // 4. Encode back to JSON
 // Use JSON_PRETTY_PRINT to keep the file readable for humans
@@ -31,13 +31,14 @@ echo "JSON file updated successfully!";
 </head>
 
 <body>
-
+    <form action="content.php" method="post">
     <h1>choose the color them of your website</h1>
-    <input type="color">
+    <input type="color" />
     <button>color</button>
     <hr>
     <h2>change the link of the main video on the home page</h2>
-    <input type="text" class="linkVideo">
-    <button class="upload">upload</button>
+    <input name="link" type="text" class="linkVideo"/>
+    <button type="submit"  class="upload">upload</button>
+    </form>
 </body>
 </html>
