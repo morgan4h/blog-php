@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bot Sofai 4H | Initializing...</title>
+    <style>
+        :root {
+            --primary: #00f2ff;
+            --secondary: #7000ff;
+            --bg: #050505;
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --text: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: radial-gradient(circle at center, #111 0%, #000 100%);
+        }
+
+        /* Ambient background glow */
+        .glow-orb {
+            position: absolute;
+            width: 50vw;
+            height: 50vw;
+            background: radial-gradient(circle, var(--secondary) 0%, transparent 70%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0.1;
+            z-index: 0;
+            filter: blur(80px);
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            width: 90%;
+            max-width: 650px;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .status-tag {
+            display: inline-block;
+            padding: 6px 16px;
+            background: rgba(0, 242, 255, 0.1);
+            color: var(--primary);
+            border: 1px solid rgba(0, 242, 255, 0.3);
+            border-radius: 100px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1.5rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.6; }
+            50% { opacity: 1; }
+            100% { opacity: 0.6; }
+        }
+
+        h1 {
+            font-size: clamp(2rem, 10vw, 3.5rem);
+            font-weight: 900;
+            letter-spacing: -1px;
+            margin-bottom: 10px;
+            background: linear-gradient(to bottom, #fff 30%, #666);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p.description {
+            color: #888;
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+
+        /* Countdown Grid */
+        .timer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            margin-bottom: 2.5rem;
+        }
+
+        .timer-box {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 20px 5px;
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+        }
+
+        .number {
+            display: block;
+            font-size: clamp(1.5rem, 6vw, 2.8rem);
+            font-weight: 700;
+            color: var(--text);
+            font-variant-numeric: tabular-nums;
+        }
+
+        .label {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            color: #555;
+            letter-spacing: 1px;
+            margin-top: 4px;
+            font-weight: bold;
+        }
+
+        /* Progress Bar Section */
+        .progress-wrapper {
+            background: rgba(255, 255, 255, 0.03);
+            height: 8px;
+            width: 100%;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, var(--secondary), var(--primary));
+            box-shadow: 0 0 20px rgba(0, 242, 255, 0.4);
+            transition: width 0.5s ease-out;
+        }
+
+        .footer-note {
+            font-size: 0.75rem;
+            color: #444;
+            letter-spacing: 1px;
+        }
+
+        /* Mobile Optimization */
+        @media (max-width: 480px) {
+            .timer-grid { gap: 8px; }
+            .timer-box { padding: 15px 5px; border-radius: 12px; }
+            .container { padding: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="glow-orb"></div>
+
+    <div class="container" id="main-content">
+        <div class="status-tag">System Sequence Active</div>
+        <h1>BOT SOFAI 4H</h1>
+        <p class="description">Synchronizing neural networks. Full access in...</p>
+
+        <div class="timer-grid">
+            <div class="timer-box">
+                <span class="number" id="hours">00</span>
+                <span class="label">Hours</span>
+            </div>
+            <div class="timer-box">
+                <span class="number" id="minutes">00</span>
+                <span class="label">Mins</span>
+            </div>
+            <div class="timer-box">
+                <span class="number" id="seconds">00</span>
+                <span class="label">Secs</span>
+            </div>
+            <div class="timer-box" style="border-color: rgba(0, 242, 255, 0.2);">
+                <span class="number" id="ms" style="color: var(--primary);">00</span>
+                <span class="label">MS</span>
+            </div>
+        </div>
+
+        <div class="progress-wrapper">
+            <div class="progress-fill" id="bar"></div>
+        </div>
+        <p class="footer-note">DO NOT DISCONNECT • ENCRYPTED CONNECTION</p>
+    </div>
+
+    <script>
+        const DURATION = 24 * 60 * 60 * 1000; // 24 Hours
+        const STORAGE_KEY = "bot_sofai_target_time";
+
+        // Initialize or Retrieve End Time
+        let targetTime = localStorage.getItem(STORAGE_KEY);
+
+        if (!targetTime) {
+            targetTime = new Date().getTime() + DURATION;
+            localStorage.setItem(STORAGE_KEY, targetTime);
+        } else {
+            targetTime = parseInt(targetTime);
+        }
+
+        function update() {
+            const now = new Date().getTime();
+            const remaining = targetTime - now;
+
+            if (remaining <= 0) {
+                document.getElementById('main-content').innerHTML = `
+                    <div class="status-tag" style="background:rgba(0,255,100,0.1); color:#00ff64; border-color:#00ff64;">Online</div>
+                    <h1>LAUNCH COMPLETE</h1>
+                    <p class="description">Bot Sofai 4H is ready for operation.</p>
+                    <button onclick="resetTimer()" style="background:transparent; color:#444; border:1px solid #444; padding:8px 16px; border-radius:5px; cursor:pointer; font-size:10px;">RESET FOR TESTING</button>
+                `;
+                return;
+            }
+
+            // Calculations
+            const h = Math.floor((remaining / (1000 * 60 * 60)) % 24);
+            const m = Math.floor((remaining / (1000 * 60)) % 60);
+            const s = Math.floor((remaining / 1000) % 60);
+            const ms = Math.floor((remaining % 1000) / 10);
+
+            // UI Update
+            document.getElementById('hours').innerText = h.toString().padStart(2, '0');
+            document.getElementById('minutes').innerText = m.toString().padStart(2, '0');
+            document.getElementById('seconds').innerText = s.toString().padStart(2, '0');
+            document.getElementById('ms').innerText = ms.toString().padStart(2, '0');
+
+            // Progress Bar (Calculation: what percentage of 24h has passed)
+            const elapsed = DURATION - remaining;
+            const percent = (elapsed / DURATION) * 100;
+            document.getElementById('bar').style.width = percent + "%";
+        }
+
+        function resetTimer() {
+            localStorage.removeItem(STORAGE_KEY);
+            location.reload();
+        }
+
+        // Fast interval for smooth Milliseconds
+        setInterval(update, 50);
+        update(); // Initial call
+    </script>
+</body>
+</html>
