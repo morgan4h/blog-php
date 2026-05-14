@@ -8,7 +8,7 @@ $jsonData = file_get_contents($filename);
 $data = json_decode($jsonData, true);
 
 // 3. Update the values
-$data['pagename'] = "Home";
+$data['pagename'] = "test";
 $data['change'] = $_POST['link'];
 
 // 4. Encode back to JSON

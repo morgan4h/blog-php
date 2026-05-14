@@ -20,7 +20,7 @@ addEventListener("click", function (e) {
 
 // read the cookie and show the user profile
 
-fetch("https://sofiai4h-youtube.rf.gd/blog/controll/checkLogin.php")
+fetch("http://localhost/s1/blog-php/controll/checkLogin.php")
 .then(response => {
   if (!response.ok) {
     throw new Error("Network response was not ok");

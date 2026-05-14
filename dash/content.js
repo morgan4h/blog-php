@@ -1,5 +1,5 @@
 
-fetch('https://sofiai4h-youtube.rf.gd/blog/dash/content.json')
+fetch('https://http://localhost/s1/blog-php/dash/content.json')
     .then(function (response) {
         // Check if the request was successful
         if (response.ok) {
