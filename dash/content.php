@@ -1,44 +1,103 @@
 <?php
+
+// Show PHP errors
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 $filename = 'content.json';
 
-// 1. Read the file
-$jsonData = file_get_contents($filename);
+// Check if form submitted
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-// 2. Decode JSON into a PHP associative array
-$data = json_decode($jsonData, true);
+    echo "<pre>";
 
-// 3. Update the values
-$data['pagename'] = "test";
-$data['change'] = $_POST['link'];
+    // 1. Check if file exists
+    if (!file_exists($filename)) {
+        die("ERROR: content.json file does not exist");
+    }
 
-// 4. Encode back to JSON
-// Use JSON_PRETTY_PRINT to keep the file readable for humans
-$newJsonData = json_encode($data, JSON_PRETTY_PRINT);
+    // 2. Read JSON file
+    $jsonData = file_get_contents($filename);
 
-// 5. Save the updated content back to the file
-file_put_contents($filename, $newJsonData);
+    if ($jsonData === false) {
+        die("ERROR: Cannot read JSON file");
+    }
 
-echo "JSON file updated successfully!";
+    echo "Original JSON:\n";
+    print_r($jsonData);
+
+    // 3. Decode JSON
+    $data = json_decode($jsonData, true);
+
+    // Check JSON errors
+    if (json_last_error() !== JSON_ERROR_NONE) {
+        die("JSON Decode Error: " . json_last_error_msg());
+    }
+
+    echo "\nDecoded Array:\n";
+    print_r($data);
+
+    // 4. Update values
+    $data['pagename'] = "Home";
+
+    // Check POST value
+    if (isset($_POST['link'])) {
+        $data['change'] = $_POST['link'];
+    } else {
+        die("ERROR: link input not received");
+    }
+
+    echo "\nUpdated Array:\n";
+    print_r($data);
+
+    // 5. Convert back to JSON
+    $newJsonData = json_encode($data, JSON_PRETTY_PRINT);
+
+    if ($newJsonData === false) {
+        die("JSON Encode Error: " . json_last_error_msg());
+    }
+
+    echo "\nNew JSON:\n";
+    print_r($newJsonData);
+
+    // 6. Save file
+    $result = file_put_contents($filename, $newJsonData);
+
+    if ($result === false) {
+        die("ERROR: Cannot write to JSON file");
+    }
+
+    echo "\nJSON file updated successfully!";
+    echo "</pre>";
+}
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>content</title>
 </head>
-
 <body>
-    <form action="content.php" method="post">
-    <h1>choose the color them of your website</h1>
+
+<form action="content.php" method="post">
+
+    <h1>choose the color theme of your website</h1>
+
     <input type="color" />
-    <button>color</button>
+
+    <button type="button">color</button>
+
     <hr>
+
     <h2>change the link of the main video on the home page</h2>
+
     <input name="link" type="text" class="linkVideo"/>
-    <button type="submit"  class="upload">upload</button>
-    </form>
+
+    <button type="submit" class="upload">upload</button>
+
+</form>
+
 </body>
 </html>
