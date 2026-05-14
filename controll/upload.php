@@ -144,7 +144,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </style>
 </head>
 <body>
-
+<a href="../dash/">dash</a>
 <div class="container">
     <h2>Upload New App</h2>
 
