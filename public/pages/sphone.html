@@ -1,123 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>blog</title>
     <style>
-/* Core Page Setup */
-body {
-    margin: 0;
-    padding: 0;
-    background-color: #0d0d0d;
-    color: #ffffff;
-    font-family: 'Inter', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-}
+        /* Core Page Setup */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0d0d0d;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
 
-main {
-    width: 100%;
-    max-width: 900px; /* Reduced from 1100px */
-    padding: 40px 20px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+        main {
+            width: 100%;
+            max-width: 900px;
+            /* Reduced from 1100px */
+            padding: 40px 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-h1 {
-    font-size: 1.8rem; /* Made smaller */
-    color: #bb86fc;
-    margin-bottom: 30px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-align: center;
-}
+        h1 {
+            font-size: 1.8rem;
+            /* Made smaller */
+            color: #bb86fc;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-align: center;
+        }
 
-/* The Grid/Flex Container */
-.folders {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: stretch;
-    gap: 20px; /* Tighter gap */
-    width: 100%;
-}
+        /* The Grid/Flex Container */
+        .folders {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: stretch;
+            gap: 20px;
+            /* Tighter gap */
+            width: 100%;
+        }
 
-/* Smaller Individual Card Styling */
-.mytools, .general {
-    background: #161616;
-    border: 2px solid #222;
-    border-radius: 15px;
-    padding: 25px; /* Reduced padding for smaller look */
-    width: 100%;
-    max-width: 280px; /* Reduced from 350px for a "smaller" box */
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    transition: transform 0.3s ease;
-}
+        /* Smaller Individual Card Styling */
+        .mytools,
+        .general {
+            background: #161616;
+            border: 2px solid #222;
+            border-radius: 15px;
+            padding: 25px;
+            /* Reduced padding for smaller look */
+            width: 100%;
+            max-width: 280px;
+            /* Reduced from 350px for a "smaller" box */
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
 
-/* Icons / Images */
-.folders img {
-    height: 50px; /* Smaller icons */
-    width: auto;
-    margin-bottom: 15px;
-    filter: drop-shadow(0 0 5px #bb86fc);
-}
+        /* Icons / Images */
+        .folders img {
+            height: 50px;
+            /* Smaller icons */
+            width: auto;
+            margin-bottom: 15px;
+            filter: drop-shadow(0 0 5px #bb86fc);
+        }
 
-h2 {
-    color: #bb86fc;
-    margin: 10px 0;
-    font-size: 1.2rem; /* Smaller text */
-}
+        h2 {
+            color: #bb86fc;
+            margin: 10px 0;
+            font-size: 1.2rem;
+            /* Smaller text */
+        }
 
-p {
-    color: #b0b0b0;
-    font-size: 0.85rem; /* Smaller text */
-    line-height: 1.5;
-    margin-bottom: 20px;
-    flex-grow: 1;
-}
+        p {
+            color: #b0b0b0;
+            font-size: 0.85rem;
+            /* Smaller text */
+            line-height: 1.5;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
 
-/* Smaller, Centered Buttons */
-.folders a {
-    text-decoration: none;
-    color: #0d0d0d;
-    background-color: #bb86fc;
-    padding: 8px 20px; /* Smaller padding */
-    border-radius: 8px;
-    font-weight: bold;
-    font-size: 0.9rem;
-    width: fit-content; /* Button only as wide as the text */
-    min-width: 120px;   /* Ensures it's still clickable */
-    transition: 0.3s;
-    display: inline-block;
-}
+        /* Smaller, Centered Buttons */
+        .folders a {
+            text-decoration: none;
+            color: #0d0d0d;
+            background-color: #bb86fc;
+            padding: 8px 20px;
+            /* Smaller padding */
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            width: fit-content;
+            /* Button only as wide as the text */
+            min-width: 120px;
+            /* Ensures it's still clickable */
+            transition: 0.3s;
+            display: inline-block;
+        }
 
-.folders a:hover {
-    background-color: #ffffff;
-    box-shadow: 0 0 10px #ffffff;
-    transform: translateY(-2px);
-}
+        .folders a:hover {
+            background-color: #ffffff;
+            box-shadow: 0 0 10px #ffffff;
+            transform: translateY(-2px);
+        }
 
-/* Responsive Adjustments */
-@media (max-width: 600px) {
-    .mytools, .general {
-        max-width: 250px; /* Even smaller on tiny phones */
-    }
-    
-    h1 {
-        font-size: 1.4rem;
-    }
-}
+        /* Responsive Adjustments */
+        @media (max-width: 600px) {
+
+            .mytools,
+            .general {
+                max-width: 250px;
+                /* Even smaller on tiny phones */
+            }
+
+            h1 {
+                font-size: 1.4rem;
+            }
+        }
     </style>
 </head>
+
 <body>
     <nav>
         <!-- include the nav from the home page -->
@@ -126,16 +143,31 @@ p {
         <h1>📁 Pick a folder</h1>
         <div class="folders">
             <div class="mytools">
-                <h2>My Tools</h2>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKAngMlgGk0VufVXTowhhF37PfzXgbdelpJg&s" alt="">
-                <p>Player-dev zone! I make my own apps—sometimes useful, always fun.</p>
-                <a href="../pages/store.html?b=my">My tools</a>
+                <h2>ABOUT HACKING</h2>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Kali-dragon-icon.svg/3840px-Kali-dragon-icon.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
+                    alt="">
+                <p>Resource of the course "About Hacking"</p>
+                <a href="../pages/store.html?b=ah">Download Now</a>
             </div>
             <div class="general">
-<h2>General Tools</h2>
+                <h2>General Tools</h2>
                 <img src="https://cdn-icons-png.flaticon.com/256/4341/4341749.png" alt="">
                 <p>Here you’ll find apps made by people who code with curiosity, creativity, and a sense of humor.</p>
-                
+
+                <a href="../pages/store.html?b=general">General Tools</a>
+            </div>
+             <div class="general">
+                <h2>General Tools</h2>
+                <img src="https://cdn-icons-png.flaticon.com/256/4341/4341749.png" alt="">
+                <p>Here you’ll find apps made by people who code with curiosity, creativity, and a sense of humor.</p>
+
+                <a href="../pages/store.html?b=general">General Tools</a>
+            </div>
+             <div class="general">
+                <h2>General Tools</h2>
+                <img src="https://cdn-icons-png.flaticon.com/256/4341/4341749.png" alt="">
+                <p>Here you’ll find apps made by people who code with curiosity, creativity, and a sense of humor.</p>
+
                 <a href="../pages/store.html?b=general">General Tools</a>
             </div>
         </div>
@@ -143,6 +175,6 @@ p {
     <footer>
         <!-- include the footer from the home pagee -->
     </footer>
-    <script src="../../controll/control.js"></script>
 </body>
+
 </html>

@@ -104,4 +104,17 @@ fetch("http://localhost/s1/blog-php/controll/checkLogin.php")
 .catch(error => {
   console.error("Error:", error);
 });
-console.log('i see you (')
+
+
+
+
+// check the parm
+
+if(location.search.slice(3) == 'ah') {
+  console.log('running...')
+  document.querySelector('.hero-image img').src = 'https://i.ytimg.com/vi/vuhdNaJ4cko/hqdefault.jpg?sqp=-oaymwEXCOADEI4CSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLC7McWua8w-1p5FwAiOb6RDp49ftw'
+  document.querySelector('.hero-text h2').textContent = 'ABOUT HACKING COURSE'
+  document.querySelector('.hero-text p').textContent = 'Watch the complete course free on YouTube.'
+  document.querySelector('.hero-text a').href = 'https://www.youtube.com/watch?v=vuhdNaJ4cko&list=PL4nOoyERqNFmKORpUkqLpYsZme0UwSzas'
+}
+
