@@ -1,0 +1,3 @@
+{
+  "nav": "<h1>SOFAI <span style=\"color: purple\">4H</span></h1>\n<div class=\"links\">\n  <a href=\"../controll/routing.php?route=about\">About</a>\n  <a href=\"../controll/routing.php?route=blog\">Blog</a>\n  <a href=\"../controll/routing.php?route=community\">Contact</a>\n  <a href=\"#down\">Go Down</a>\n  <a class=\"login\" href=\"../controll/login.php\">Login</a>\n</div>"
+}

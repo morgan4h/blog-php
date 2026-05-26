@@ -9,9 +9,11 @@ include_once "../controll/lock.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../dash/css/index.css">
+    <link rel="stylesheet" href="../public/style/index.css">
     <title>admin</title>
 </head>
 <body>
+    <nav></nav>
     <h1>choose the part we need to manage today sir.</h1>
     <a href="user.php">user</a>
     <hr>
@@ -19,5 +21,6 @@ include_once "../controll/lock.php";
     <hr>
     <a href="content.php">website content</a>
     <a href="../index.html">Exist</a>
+    <script src="../js/disgin.js"></script>
 </body>
 </html>

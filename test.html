@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="../public/style/index.css" />
+</head>
+<body>
+<div class="navbar">
+
+</div>    
+<script>
+    logoName = 'test'
+    logoLastName = '4h'
+    opt1 = 'test1'
+    opt2 = "test2"
+    opt3 = "test 3"
+    opt4 = "test4"
+    let navbar = ` <h1>${logoName} <span style="color: purple">${logoLastName}</span></h1>
+      <div class="links"> 
+        <a href="../controll/routing.php?route=about">${opt1}</a>
+        <a href="../controll/routing.php?route=blog">${opt2}</a>
+        <a href="../controll/routing.php?route=community">${opt3}</a>
+        <a href="#down">Go Down</a>
+        <a class="login" href="../controll/login.php">${opt4}</a>
+      </div>
+    </nav>`
+    document.querySelector('.navbar').innerHTML = navbar
+</script>
+</body>
+</html>

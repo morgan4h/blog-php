@@ -87,63 +87,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
 <meta charset="UTF-8">
 <title>Upload App</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        background: #f4f4f4;
-        display: flex;
-        justify-content: center;
-        padding-top: 50px;
-    }
-    .container {
-        background: #fff;
-        padding: 20px 30px;
-        border-radius: 8px;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        width: 420px;
-    }
-    h2 {
-        text-align: center;
-        margin-bottom: 20px;
-        color: #333;
-    }
-    input[type="text"], textarea {
-        width: 100%;
-        padding: 8px 10px;
-        margin: 6px 0 12px 0;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-    }
-    textarea {
-        resize: vertical;
-        height: 70px;
-    }
-    button {
-        width: 100%;
-        padding: 10px;
-        background: #28a745;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 16px;
-    }
-    button:hover {
-        background: #218838;
-    }
-    .msg {
-        margin-bottom: 15px;
-        text-align: center;
-        font-weight: bold;
-        color: red;
-    }
-    .msg.success {
-        color: green;
-    }
-</style>
+<link rel="stylesheet" href="../public/style/index.css">
+<link rel="stylesheet" href="../public/style/upload.css">
 </head>
 <body>
+    <nav></nav>
 <a href="../dash/">dash</a>
 <div class="container">
     <h2>Upload New App</h2>
@@ -183,6 +131,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <button type="submit">Upload App</button>
     </form>
 </div>
-
+<script src="../js/disgin.js"></script>
 </body>
 </html>
