@@ -8,6 +8,7 @@ include_once "../controll/lock.php";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../dash/css/index.css">
     <title>admin</title>
 </head>
 <body>
@@ -17,6 +18,6 @@ include_once "../controll/lock.php";
     <a href="app.php">apps</a>
     <hr>
     <a href="content.php">website content</a>
-    
+    <a href="../index.html">Exist</a>
 </body>
 </html>
