@@ -49,11 +49,29 @@ function theme() {
     console.log(`you choose ${document.querySelector('.select-theme').value}`)
 }
 
+function changeMainVideo() {
+    console.log('change video...')
+      fetch('../js/links.json')
+        .then(response => response.json())
+        .then(data => {
+            console.log(data.mainVideo)
+           
+        })
+
+}
+
 // event for call the function from the buttons
 
 
 buttons[0].onclick = function () {
-    changeLinks()
+    if(document.querySelector('.select-links').value == 'socailMedai') {
+
+        changeLinks()
+    }else if(document.querySelector('.select-links').value == 'mainVideo') {
+            changeMainVideo()
+    }else {
+        console.log('no structer insert...')
+    }
 }
 
 buttons[1].onclick = function () {

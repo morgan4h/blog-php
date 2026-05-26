@@ -41,3 +41,22 @@ fetch("http://localhost/s1/blog-php/controll/checkLogin.php")
   console.error("Error:", error);
 });
 //console.log('i see you (')
+
+
+console.log(document.querySelector('iframe').src)
+
+
+fetch("../js/links.json")
+.then(response => {
+  if (!response.ok) {
+    throw new Error("Network response was not ok");
+  }
+  return response.json(); // parse JSON
+})
+.then(data => {
+  console.log(data.mainVideo);
+  document.querySelector('iframe').src = data.mainVideo
+})
+.catch(error => {
+  console.error("Error:", error);
+});
