@@ -39,7 +39,25 @@ function changeLinks() {
             btnRes.textContent = 'change values'
             document.querySelector('.res').appendChild(btnRes)
             btnRes.onclick = function () {
-                location.href = '../controll/apiController.php?action=sc'
+                document.querySelectorAll('.res input').forEach(input => {
+                    data[input.name] = input.value;
+                });
+
+                fetch('../controll/apiController.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'action': 'sc'
+                    },
+                    body: JSON.stringify(data)
+                })
+                    .then(res => res.text())
+                    .then(res => {
+                        console.log(res);
+                        alert(res);
+                    })
+                    .catch(err => console.error(err));
+
             }
         })
 }
@@ -48,28 +66,69 @@ function theme() {
     console.log('change the styling function...')
     console.log(`you choose ${document.querySelector('.select-theme').value}`)
 }
-
 function changeMainVideo() {
-    console.log('change video...')
-      fetch('../js/links.json')
+    console.log('change video...');
+
+    fetch('../js/links.json')
         .then(response => response.json())
         .then(data => {
-            console.log(data.mainVideo)
-           
-        })
 
+            const container = document.querySelector('.res');
+            container.innerHTML = '';
+
+            // current main video value
+            const currentVideo = data.mainVideo;
+
+            // create input
+            let input = document.createElement('input');
+            input.value = currentVideo;
+            input.placeholder = "Main Video Link";
+            input.name = "mainVideo";
+
+            container.appendChild(input);
+
+            // button to save
+            let btn = document.createElement('button');
+            btn.className = 'resButton';
+            btn.textContent = 'Update Main Video';
+
+            container.appendChild(btn);
+
+            btn.onclick = function () {
+
+                const newVideoLink = input.value;
+
+                const payload = {
+                    mainVideo: newVideoLink
+                };
+
+                fetch('../controll/apiController.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-Action': 'mainVideo'   // ✅ THIS is your tag header
+                    },
+                    body: JSON.stringify(payload)
+                })
+                .then(res => res.text())
+                .then(res => {
+                    console.log(res);
+                    alert(res);
+                })
+                .catch(err => console.error(err));
+            };
+        });
 }
-
 // event for call the function from the buttons
 
 
 buttons[0].onclick = function () {
-    if(document.querySelector('.select-links').value == 'socailMedai') {
+    if (document.querySelector('.select-links').value == 'socailMedai') {
 
         changeLinks()
-    }else if(document.querySelector('.select-links').value == 'mainVideo') {
-            changeMainVideo()
-    }else {
+    } else if (document.querySelector('.select-links').value == 'mainVideo') {
+        changeMainVideo()
+    } else {
         console.log('no structer insert...')
     }
 }
