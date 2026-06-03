@@ -64,3 +64,35 @@ echo json_encode([
     'success' => false,
     'message' => 'invalid action'
 ]);
+
+// -------------------------
+// 2. Styling UPDATE
+// -------------------------
+if ($action === 'styling') {
+
+    $file = __DIR__ . '/../js/disgin.json';
+
+    $json = json_decode(file_get_contents($file), true);
+    $newData = json_decode(file_get_contents("php://input"), true);
+
+    if (isset($newData['theme'])) {
+        $json['styling'][0]['theme'] = $newData['theme'];
+    }
+
+    if (isset($newData['background'])) {
+        $json['styling'][0]['backgroun'] = $newData['background'];
+    }
+
+    file_put_contents(
+        $file,
+        json_encode($json, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES)
+    );
+
+    echo json_encode([
+        'success' => true,
+        'message' => 'styling updated',
+        'styling' => $json['styling']
+    ]);
+
+    exit;
+}

@@ -26,7 +26,7 @@
         <select name="" class="select-theme">
             <option value="color">change color</option>
             <option value="themeDarkLight">change the theme dark/light</option>
-            <option value="fontStyle">font style</option>
+            <!-- <option value="fontStyle">font style</option> -->
         </select>
         <button class="styling">change css</button>
      </div>

@@ -62,10 +62,7 @@ function changeLinks() {
         })
 }
 
-function theme() {
-    console.log('change the styling function...')
-    console.log(`you choose ${document.querySelector('.select-theme').value}`)
-}
+
 function changeMainVideo() {
     console.log('change video...');
 
@@ -133,6 +130,3 @@ buttons[0].onclick = function () {
     }
 }
 
-buttons[1].onclick = function () {
-    theme()
-}
