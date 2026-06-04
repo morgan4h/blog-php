@@ -106,7 +106,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <input type="text" name="name" placeholder="App Name"
                value="<?php echo htmlspecialchars($_POST['name'] ?? ''); ?>" required>
 
-        <input type="text" name="type" placeholder="Type (mobile / desktop)"
+        <input type="text" name="type" placeholder="Type (which blog?? )"
                value="<?php echo htmlspecialchars($_POST['type'] ?? ''); ?>" required>
 
         <input type="text" name="picture" placeholder="Picture URL"
