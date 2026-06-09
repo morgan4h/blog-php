@@ -1,15 +1,16 @@
-
-
 addEventListener("click", function (e) {
+  // Safe check to ensure e.target exists before reading 'alt'
+  if (!e.target) return;
+
   //console.log(e.target);
   if (e.target.alt == "project image") {
     // this.location.href = "../controll/routing.php?route=lp";
   } else if (e.target.alt == "blog") {
-    this.location.href = "../controll/routing.php?route=blog";
+    this.location.href = "http://localhost/s1/blog-php/controll/routing.php?blog";
   } else if (e.target.alt == "courses") {
-    this.location.href = "../controll/routing.php?route=courses";
+    this.location.href = "http://localhost/s1/blog-php/controll/routing.php?courses";
   } else if (e.target.alt == "Community") {
-    this.location.href = "../controll/routing.php?route=community";
+    this.location.href = "http://localhost/s1/blog-php/controll/routing.php?community";
   } else {
     //console.log("back to home page, can't find direction (:");
   }
@@ -31,8 +32,12 @@ fetch("http://localhost/s1/blog-php/controll/checkLogin.php")
   //console.log(data.code); // use the data
   if(data.code == '200') {
     //console.log('update the login information')
-    document.querySelector('nav .login').textContent = data.username
-    document.querySelector('nav .login').href = '../model/profile.html' 
+    // Safe check: Only update if the login element exists in the DOM
+    const loginElem = document.querySelector('nav .login');
+    if (loginElem) {
+      loginElem.textContent = data.username;
+      loginElem.href = '../model/profile.html';
+    }
   }else {
     //console.log('not going to update anything at all')
   }
@@ -43,7 +48,17 @@ fetch("http://localhost/s1/blog-php/controll/checkLogin.php")
 //console.log('i see you (')
 
 
-console.log(document.querySelector('iframe').src)
+// Safe check: Prevent crash if no iframe is found on the page
+try {
+  const iframeElem = document.querySelector('iframe');
+  if (iframeElem) {
+    console.log(iframeElem.src);
+  } else {
+    console.log("No iframe found on this page.");
+  }
+} catch (err) {
+  console.error("Error reading iframe:", err);
+}
 
 
 fetch("../js/links.json")
@@ -55,7 +70,11 @@ fetch("../js/links.json")
 })
 .then(data => {
   console.log(data.mainVideo);
-  document.querySelector('iframe').src = data.mainVideo
+  // Safe check: Only assign source if iframe exists and data has mainVideo
+  const iframeElem = document.querySelector('iframe');
+  if (iframeElem && data && data.mainVideo) {
+    iframeElem.src = data.mainVideo;
+  }
 })
 .catch(error => {
   console.error("Error:", error);

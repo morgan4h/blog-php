@@ -124,6 +124,7 @@ if (stripos($contentType, 'application/json') !== false) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manage Users Dashboard</title>
+    <link rel="stylesheet" href="../public/style/index.css">
     <style>
         :root {
             --bg-main: #f8fafc;
@@ -345,15 +346,9 @@ if (stripos($contentType, 'application/json') !== false) {
 </head>
 <body>
 
-<div class="nav">
-    <h2>Dashboard</h2>
-    <div>Welcome, Admin</div>
-</div>
+<nav></nav>
 
-<div class="sidebar">
-    <p>🏠 Home</p>
-    <p>👥 Manage Users</p>
-</div>
+
 
 <div class="content">
     <h2>System Users</h2>
@@ -518,5 +513,8 @@ userUpdateForm.addEventListener('submit', function(e) {
     userCrud('saveUpdate', id, extraData);
 });
 </script>
+<script src="../js/disgin.js"></script>
+    <script src="../controll/control.js"></script>
+
 </body>
 </html>

@@ -37,6 +37,8 @@
 
     <script src="../js/content.js"></script>
     <script src="../js/disgin.js"></script>
+        <script src="../controll/control.js"></script>
+
 </body>
 
 </html>

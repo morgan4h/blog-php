@@ -92,7 +92,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
     <nav></nav>
-<a href="../dash/">dash</a>
+<!-- <a href="../dash/">dash</a> -->
 <div class="container">
     <h2>Upload New App</h2>
 
@@ -132,5 +132,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </form>
 </div>
 <script src="../js/disgin.js"></script>
+<script src="control.js"></script>
 </body>
 </html>

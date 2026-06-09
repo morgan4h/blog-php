@@ -20,7 +20,10 @@ include_once "../controll/lock.php";
     <a href="app.php">apps</a>
     <hr>
     <a href="content.php">website content</a>
+    <a href="../model/sing.html">add user</a>
+    <a href="../controll/upload.php">Upload App</a>
     <a href="../index.html">Exist</a>
     <script src="../js/disgin.js"></script>
+    <script src="../controll/control.js"></script>
 </body>
 </html>

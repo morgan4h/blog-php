@@ -13,15 +13,7 @@
   <nav>
      
    </nav>
-  <center>
-    <div class="notifacation">
-      <div class="title">BOT SOFAI 4H</div>
-      <div class="icon"><img src="../res/icons/bot.jpeg" alt="bot"></div>
-      <a href="../model/waiting.html"> <button>Download</button>
-      </a>
-      <!-- <div class="boi"></div> -->
-    </div>
-  </center>
+
 
   <header id="up">
     <h2>latest project </h2>
@@ -80,6 +72,50 @@
   <script src="../controll/control.js"></script>
   <script src="../js/content.js"></script>
   <script src="../js/disgin.js"></script>
+  <script>
+
+// read the cookie and show the user profile
+
+fetch("http://localhost/s1/blog-php/controll/checkLogin.php")
+.then(response => {
+  if (!response.ok) {
+    throw new Error("Network response was not ok");
+  }
+  return response.json(); // parse JSON
+})
+.then(data => {
+  //console.log(data.code); // use the data
+  if(data.code == '200') {
+    //console.log('update the login information')
+    // Safe check: Only update if the login element exists in the DOM
+    const loginElem = document.querySelector('nav .login');
+    if (loginElem) {
+      loginElem.textContent = data.username;
+      loginElem.href = '../model/profile.html';
+    }
+  }else {
+    //console.log('not going to update anything at all')
+  }
+})
+.catch(error => {
+  console.error("Error:", error);
+});
+//console.log('i see you (')
+
+
+// Safe check: Prevent crash if no iframe is found on the page
+try {
+  const iframeElem = document.querySelector('iframe');
+  if (iframeElem) {
+    console.log(iframeElem.src);
+  } else {
+    console.log("No iframe found on this page.");
+  }
+} catch (err) {
+  console.error("Error reading iframe:", err);
+}
+
+  </script>
 </body>
 
 </html>

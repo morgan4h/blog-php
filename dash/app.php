@@ -12,7 +12,7 @@ include_once "../controll/lock.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-
+    <link rel="stylesheet" href="../public/style/index.css">
     <style>
         :root {
             --bg-main: #f8fafc;
@@ -301,16 +301,9 @@ include_once "../controll/lock.php";
 </head>
 <body>
 
-<div class="nav">
-    <h2>Dashboard</h2>
-    <div>Welcome, Admin</div>
-</div>
+<nav></nav>
 
-<div class="sidebar">
-    <p>🏠 Home</p>
-    <p>👥 Manage Users</p>
-    <p>🧪 Demo</p>
-</div>
+
 
 <div class="content">
     <div class="app-grid">
@@ -365,5 +358,8 @@ include_once "../controll/lock.php";
 </div>
 
 <script src="../js/app.js"></script>
+<script src="../js/disgin.js"></script>
+    <script src="../controll/control.js"></script>
+
 </body>
 </html>
