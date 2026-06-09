@@ -1,3 +1,6 @@
+<?php 
+include_once '../controll/lock.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 

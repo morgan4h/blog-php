@@ -7,6 +7,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 include_once "../controll/db.php";
+include_once '../controll/lock.php';
 // include_once "../controll/lock.php"; // Uncomment if your session locking script is needed
 
 // Check if the request is an incoming JSON API AJAX call
