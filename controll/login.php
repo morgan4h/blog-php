@@ -1,64 +1,75 @@
 <?php
     include_once "../model/login.html";
     include_once "../controll/db.php";
-    include_once "../controll/global.php"
+    include_once "../controll/global.php";
 ?>
 
 <?php
+$feedbackMessage = "";
+$loginSuccess = false;
 
-@$email = $_POST['email'];
-@$ps = $_POST['ps'];
-
-?>
-
-
-
-
-<?php
-
-// check the information then allow login process
-
-$email = @$_POST['email'];
-$ps = @$_POST['ps'];
-
-
-$sql = "SELECT * FROM `users`";
-// Execute the SQL query
-$result = $conn->query($sql);
-
-// Process the result set
-if ($result->num_rows > 0) {
-  // Output data of each row
-  while($row = $result->fetch_assoc()) {
-    // echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
-    // echo $row['name'];
-    if(@$email == $row['email'] && @$ps == $row['pswd']) {
-      setcookie("tokenLogin", $ps, time() + 3600,'/'); // Expires in 1 hour
-        setcookie("email", $email, time() + 3600,'/'); // Expires in 1 hour
-            setcookie("name", $row['name'], time() + 3600,'/'); // Expires in 1 hour
-            setcookie("va", $row['verfy'], time() + 3600,'/'); // Expires in 1 hour
-      $okayMessage = "welcome your email is  " . $_COOKIE['tokenLogin'];
-      header("Location: ../public/index.html");
-      exit();
-    }else {
-      $notOkayMessage = "somethign went wrong";
-    }
-  }
-} else {
-  echo "0 results";
+// Check if user arrived here freshly after a successful signup
+if (isset($_GET['signup']) && $_GET['signup'] === 'success') {
+    $feedbackMessage = "Account created successfully! Please log in.";
+    $loginSuccess = true; 
 }
 
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = trim($_POST['email'] ?? '');
+    $ps = $_POST['ps'] ?? '';
 
+    if (!empty($email) && !empty($ps)) {
+        // Prepared statement handles SQL Injection safety
+        $stmt = $conn->prepare("SELECT * FROM `users` WHERE `email` = ?");
+        $stmt->bind_param("s", $email);
+        $stmt->execute();
+        $result = $stmt->get_result();
 
+        if ($result->num_rows > 0) {
+            $row = $result->fetch_assoc();
+            
+            // Password verification
+            if (password_verify($ps, $row['pswd'])) {
+                
+                // Set cookies safely
+                setcookie("tokenLogin", $row['pswd'], time() + 3600, '/'); 
+                setcookie("email", $email, time() + 3600, '/'); 
+                setcookie("name", $row['name'], time() + 3600, '/'); 
+                setcookie("va", $row['verfy'], time() + 3600, '/'); 
+                
+                $feedbackMessage = "Welcome back, " . $row['name'] . "!";
+                $loginSuccess = true;
+                
+                header("Location: ../public/index.html");
+                exit();
+            } else {
+                $feedbackMessage = "Incorrect email or password.";
+            }
+        } else {
+            $feedbackMessage = "Incorrect email or password.";
+        }
+        $stmt->close();
+    } else {
+        $feedbackMessage = "Please enter both your email and password.";
+    }
+}
 ?>
 
 <script>
-  let myTitle = document.querySelector("h2")
-  myTitle.textContent = '<?php echo $okayMessage OR $notOkayMessage ?>'
-  if (myTitle.textContent == 1) {
-     myTitle.textContent = '<?php echo $okayMessage ?>'
-    //  location.href = '../index.html'
-  }else {
-    console.log('bad')
+  let myTitle = document.querySelector("h2");
+  if (myTitle) {
+      // htmlspecialchars applied here eliminates XSS injection threats
+      let msg = '<?php echo htmlspecialchars($feedbackMessage, ENT_QUOTES, "UTF-8"); ?>';
+      let isSuccess = '<?php echo $loginSuccess ? "1" : "0"; ?>';
+      
+      if (msg !== '') {
+          myTitle.textContent = msg;
+          if (isSuccess === "1") {
+              myTitle.style.color = 'green';
+          } else {
+              myTitle.style.color = 'red';
+              console.log('bad login attempt');
+          }
+      }
   }
 </script>

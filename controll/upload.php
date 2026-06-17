@@ -133,5 +133,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </div>
 <script src="../js/disgin.js"></script>
 <script src="control.js"></script>
+
+            <script src="../js/logger.js"></script>
 </body>
 </html>

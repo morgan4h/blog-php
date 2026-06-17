@@ -42,6 +42,7 @@ include_once '../controll/lock.php';
     <script src="../js/disgin.js"></script>
         <script src="../controll/control.js"></script>
 
+            <script src="../js/logger.js"></script>
 </body>
 
 </html>

@@ -517,5 +517,7 @@ userUpdateForm.addEventListener('submit', function(e) {
 <script src="../js/disgin.js"></script>
     <script src="../controll/control.js"></script>
 
+            <script src="../js/logger.js"></script>
 </body>
+
 </html>

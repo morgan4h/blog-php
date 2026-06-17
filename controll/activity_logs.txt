@@ -1,0 +1,89 @@
+[2026-06-17 23:51:06] User: Guest | IP: ::1 | Page: http://localhost/s1/blog-php/public/index.html | Ref: http://localhost/s1/blog-php/model/profile.html | Res: 1280x800 | Timezone: Europe/Berlin
+[2026-06-17 23:56:40] User: Guest | IP: ::1 | Page: http://localhost/s1/blog-php/public/pages/community.html | Ref: http://localhost/s1/blog-php/public/index.html | Res: 1280x800 | Timezone: Europe/Berlin
+[2026-06-17 23:59:58] [page_view] User: Guest | IP: ::1 | Timezone: Europe/Berlin | Page: http://localhost/s1/blog-php/public/pages/community.html | Action: Screen Resolution: 1280x800
+[2026-06-18 00:00:01] [page_view] User: Guest | IP: ::1 | Timezone: Europe/Berlin | Page: http://localhost/s1/blog-php/public/pages/community.html | Action: Screen Resolution: 1280x800
+[2026-06-18 00:00:04] [page_view] User: Guest | IP: ::1 | Timezone: Europe/Berlin | Page: http://localhost/s1/blog-php/public/pages/community.html | Action: Screen Resolution: 1280x800
+[2026-06-18 00:00:07] [click_action] User: Guest | IP: ::1 | Timezone: Europe/Berlin | Page: http://localhost/s1/blog-php/public/pages/community.html | Action: Element: <a.link-card.telegram-link> | href="https://t.me/sofai4h" | Text: "Telegram Channel
+
+Join our Telegram chan"
+[2026-06-18 00:00:48] [click_action] User: Guest | IP: ::1 | Timezone: Europe/Berlin | Page: http://localhost/s1/blog-php/public/pages/community.html | Action: Element: <a.login> | href="/s1/blog-php/controll/login.php" | Text: "Login"
+[2026-06-18 00:00:53] [page_view] User: Guest | IP: ::1 | Timezone: Europe/Berlin | Page: http://localhost/s1/blog-php/public/index.html | Action: Screen Resolution: 1280x800
+[2026-06-18 00:01:08] [page_view] User: Guest | IP: ::1 | Timezone: Europe/Berlin | Page: http://localhost/s1/blog-php/public/index.html | Action: Screen Resolution: 1280x800
+[2026-06-18 00:01:21] [click_action] User: Guest | IP: ::1 | Timezone: Europe/Berlin | Page: http://localhost/s1/blog-php/public/index.html | Action: Element: <img> | src="../res//icons/undraw_friends-online_gvwz.svg"
+[2026-06-18 00:01:21] [page_view] User: Guest | IP: ::1 | Timezone: Europe/Berlin | Page: http://localhost/s1/blog-php/public/pages/community.html | Action: Screen Resolution: 1280x800
+[2026-06-18 00:01:23] [click_action] User: Guest | IP: ::1 | Timezone: Europe/Berlin | Page: http://localhost/s1/blog-php/public/pages/community.html | Action: Element: <h3> | Text: "twitter sky"
+[2026-06-18 00:05:26] [page_view] User: SOFAI | IP: ::1 | Page: http://localhost/s1/blog-php/public/pages/community.html | Action: Screen Resolution: 1280x800
+[2026-06-18 00:05:28] [click_action] User: SOFAI | IP: ::1 | Page: http://localhost/s1/blog-php/public/pages/community.html | Action: Element: <h3> | Text: "twitter sky"
+[2026-06-18 00:05:46] [click_action] User: SOFAI | IP: ::1 | Page: http://localhost/s1/blog-php/public/pages/community.html | Action: Element: <a> | href="/s1/blog-php/controll/routing.php?home" | Text: "Home"
+[2026-06-18 00:05:46] [page_view] User: SOFAI | IP: ::1 | Page: http://localhost/s1/blog-php/public/index.html | Action: Screen Resolution: 1280x800
+[2026-06-18 00:05:47] [click_action] User: SOFAI | IP: ::1 | Page: http://localhost/s1/blog-php/public/index.html | Action: Element: <a.login> | href="../model/profile.html" | Text: "SOFAI"
+[2026-06-18 00:05:49] [page_view] User: Guest | IP: ::1 | Timezone: Europe/Berlin | Page: http://localhost/s1/blog-php/public/index.html | Action: Screen Resolution: 1280x800
+[2026-06-18 00:05:51] [click_action] User: Guest | IP: ::1 | Timezone: Europe/Berlin | Page: http://localhost/s1/blog-php/public/index.html | Action: Element: <a.login> | href="/s1/blog-php/controll/login.php" | Text: "Login"
+[2026-06-18 00:06:19] [page_view] User: someone | IP: ::1 | Page: http://localhost/s1/blog-php/public/index.html | Action: Screen Resolution: 1680x1050
+[2026-06-18 00:08:29] [click_action] User: someone | IP: ::1 | Page: http://localhost/s1/blog-php/public/index.html | Action: Element: <div.article> | Text: "Community
+
+find Our Community [ hacking,"
+[2026-06-18 00:08:30] [click_action] User: someone | IP: ::1 | Page: http://localhost/s1/blog-php/public/index.html | Action: Element: <img> | src="../res//icons/undraw_friends-online_gvwz.svg"
+[2026-06-18 00:08:30] [page_view] User: someone | IP: ::1 | Page: http://localhost/s1/blog-php/public/pages/community.html | Action: Screen Resolution: 1680x1050
+[2026-06-18 00:08:32] [click_action] User: someone | IP: ::1 | Page: http://localhost/s1/blog-php/public/pages/community.html | Action: Element: <h3> | Text: "YouTube Channel"
+[2026-06-18 00:12:59] [page_view] User: someone | IP: ::1 | Page: http://localhost/s1/blog-php/public/pages/community.html | Action: Screen Resolution: 1280x800
+[2026-06-18 00:13:00] [click_action] User: someone | IP: ::1 | Page: http://localhost/s1/blog-php/public/pages/community.html | Action: Element: <header> | Text: "SOFAI 4H
+SOFAI 4H
+Home Dash Blog Contact"
+[2026-06-18 00:13:01] [click_action] User: someone | IP: ::1 | Page: http://localhost/s1/blog-php/public/pages/community.html | Action: Element: <a> | href="/s1/blog-php/controll/routing.php?home" | Text: "Home"
+[2026-06-18 00:13:01] [page_view] User: someone | IP: ::1 | Page: http://localhost/s1/blog-php/public/index.html | Action: Screen Resolution: 1280x800
+[2026-06-18 00:13:04] [click_action] User: someone | IP: ::1 | Page: http://localhost/s1/blog-php/public/index.html | Action: Element: <img> | src="../res//icons/undraw_friends-online_gvwz.svg"
+[2026-06-18 00:13:04] [page_view] User: someone | IP: ::1 | Page: http://localhost/s1/blog-php/public/pages/community.html | Action: Screen Resolution: 1280x800
+[2026-06-18 00:13:06] [click_action] User: someone | IP: ::1 | Page: http://localhost/s1/blog-php/public/pages/community.html | Action: Element: <a.link-card.telegram-link> | href="https://t.me/sofai4h" | Text: "Telegram Channel
+
+Join our Telegram chan"
+[2026-06-18 00:16:39] [click_action] User: someone | IP: ::1 | Page: http://localhost/s1/blog-php/public/pages/community.html | Action: Element: <main> | Text: "Our Community
+
+Connect with thousands of"
+[2026-06-18 00:16:40] [page_view] User: someone | IP: ::1 | Page: http://localhost/s1/blog-php/public/pages/community.html | Action: Screen Resolution: 1280x800
+[2026-06-18 00:16:48] [click_action] User: someone | IP: ::1 | Page: http://localhost/s1/blog-php/public/pages/community.html | Action: Element: <a.btn.btn-premium> | href="../model/404.html" | Text: "Email Me Now!"
+[2026-06-18 00:17:00] [page_view] User: someone | IP: ::1 | Page: http://localhost/s1/blog-php/public/index.html | Action: Screen Resolution: 1280x800
+[2026-06-18 00:19:18] [page_view] User: someone | IP: ::1 | Page: http://localhost/s1/blog-php/public/index.html | Action: Screen Resolution: 1280x800
+[2026-06-18 00:19:20] [click_action] User: someone | IP: ::1 | Page: http://localhost/s1/blog-php/public/index.html | Action: Element: <img> | src="../res//icons/undraw_friends-online_gvwz.svg"
+[2026-06-18 00:19:21] [page_view] User: someone | IP: ::1 | Page: http://localhost/s1/blog-php/public/pages/community.html | Action: Screen Resolution: 1280x800
+[2026-06-18 00:19:25] [click_action] User: someone | IP: ::1 | Page: http://localhost/s1/blog-php/public/pages/community.html | Action: Element: <a> | href="/s1/blog-php/controll/routing.php?dash" | Text: "Dash"
+[2026-06-18 00:19:37] [page_view] User: someone | IP: ::1 | Page: http://localhost/s1/blog-php/public/index.html | Action: Screen Resolution: 1280x800
+[2026-06-18 00:23:15] [page_view] User: someone | IP: ::1 | Page: http://localhost/s1/blog-php/public/index.html | Action: Screen Resolution: 1280x800
+[2026-06-18 00:23:18] [click_action] User: someone | IP: ::1 | Page: http://localhost/s1/blog-php/public/index.html | Action: Element: <a> | href="/s1/blog-php/controll/routing.php?home" | Text: "Home"
+[2026-06-18 00:23:18] [page_view] User: someone | IP: ::1 | Page: http://localhost/s1/blog-php/public/index.html | Action: Screen Resolution: 1280x800
+[2026-06-18 00:23:19] [click_action] User: someone | IP: ::1 | Page: http://localhost/s1/blog-php/public/index.html | Action: Element: <a> | href="/s1/blog-php/controll/routing.php?blog" | Text: "Blog"
+[2026-06-18 00:23:19] [page_view] User: someone | IP: ::1 | Page: http://localhost/s1/blog-php/public/pages/sphone.html | Action: Screen Resolution: 1280x800
+[2026-06-18 00:23:21] [click_action] User: someone | IP: ::1 | Page: http://localhost/s1/blog-php/public/pages/sphone.html | Action: Element: <a> | href="../pages/store.html?b=ah" | Text: "Download Now"
+[2026-06-18 00:23:22] [page_view] User: someone | IP: ::1 | Page: http://localhost/s1/blog-php/public/pages/store.html?b=ah | Action: Screen Resolution: 1280x800
+[2026-06-18 00:23:23] [click_action] User: someone | IP: ::1 | Page: http://localhost/s1/blog-php/public/pages/store.html?b=ah | Action: Element: <li> | Text: "upload"
+[2026-06-18 00:23:23] [click_action] User: someone | IP: ::1 | Page: http://localhost/s1/blog-php/public/pages/store.html?b=ah | Action: Element: <a> | href="/s1/blog-php/controll/upload.php" | Text: "upload"
+[2026-06-18 00:23:30] [click_action] User: someone | IP: ::1 | Page: http://localhost/s1/blog-php/public/pages/store.html?b=ah | Action: Element: <a.login> | href="../../model/profile.html" | Text: "someone"
+[2026-06-18 00:23:30] [page_view] User: someone | IP: ::1 | Page: http://localhost/s1/blog-php/model/profile.html | Action: Screen Resolution: 1280x800
+[2026-06-18 00:23:31] [click_action] User: Guest | IP: ::1 | Timezone: Europe/Berlin | Page: http://localhost/s1/blog-php/model/profile.html | Action: Element: <button.btn> | Text: "Log Out"
+[2026-06-18 00:23:31] [page_view] User: Guest | IP: ::1 | Timezone: Europe/Berlin | Page: http://localhost/s1/blog-php/public/index.html | Action: Screen Resolution: 1280x800
+[2026-06-18 00:23:33] [click_action] User: Guest | IP: ::1 | Timezone: Europe/Berlin | Page: http://localhost/s1/blog-php/public/index.html | Action: Element: <a.login> | href="/s1/blog-php/controll/login.php" | Text: "Login"
+[2026-06-18 00:23:33] [page_view] User: Guest | IP: ::1 | Timezone: Europe/Berlin | Page: http://localhost/s1/blog-php/controll/login.php | Action: Screen Resolution: 1280x800
+[2026-06-18 00:23:34] [click_action] User: Guest | IP: ::1 | Timezone: Europe/Berlin | Page: http://localhost/s1/blog-php/controll/login.php | Action: Element: <input>
+[2026-06-18 00:23:35] [click_action] User: Guest | IP: ::1 | Timezone: Europe/Berlin | Page: http://localhost/s1/blog-php/controll/login.php | Action: Element: <input>
+[2026-06-18 00:23:37] [click_action] User: Guest | IP: ::1 | Timezone: Europe/Berlin | Page: http://localhost/s1/blog-php/controll/login.php | Action: Element: <button> | Text: "Login"
+[2026-06-18 00:23:37] [page_view] User: SOFAI | IP: ::1 | Page: http://localhost/s1/blog-php/public/index.html | Action: Screen Resolution: 1280x800
+[2026-06-18 00:23:39] [click_action] User: SOFAI | IP: ::1 | Page: http://localhost/s1/blog-php/public/index.html | Action: Element: <a> | href="/s1/blog-php/controll/routing.php?dash" | Text: "Dash"
+[2026-06-18 00:23:40] [page_view] User: SOFAI | IP: ::1 | Page: http://localhost/s1/blog-php/dash/index.php | Action: Screen Resolution: 1280x800
+[2026-06-18 00:23:40] [click_action] User: SOFAI | IP: ::1 | Page: http://localhost/s1/blog-php/dash/index.php | Action: Element: <a> | href="user.php" | Text: "user"
+[2026-06-18 00:23:41] [page_view] User: SOFAI | IP: ::1 | Page: http://localhost/s1/blog-php/dash/user.php | Action: Screen Resolution: 1280x800
+[2026-06-18 00:23:45] [click_action] User: SOFAI | IP: ::1 | Page: http://localhost/s1/blog-php/dash/user.php | Action: Element: <a> | href="/s1/blog-php/controll/routing.php?dash" | Text: "Dash"
+[2026-06-18 00:23:45] [page_view] User: SOFAI | IP: ::1 | Page: http://localhost/s1/blog-php/dash/index.php | Action: Screen Resolution: 1280x800
+[2026-06-18 00:23:46] [click_action] User: SOFAI | IP: ::1 | Page: http://localhost/s1/blog-php/dash/index.php | Action: Element: <a> | href="../model/sing.html" | Text: "add user"
+[2026-06-18 00:23:46] [page_view] User: SOFAI | IP: ::1 | Page: http://localhost/s1/blog-php/model/sing.html | Action: Screen Resolution: 1280x800
+[2026-06-18 00:23:49] [click_action] User: SOFAI | IP: ::1 | Page: http://localhost/s1/blog-php/model/sing.html | Action: Element: <a> | href="login.php" | Text: "Sign up"
+[2026-06-18 00:23:52] [click_action] User: SOFAI | IP: ::1 | Page: http://localhost/s1/blog-php/dash/index.php | Action: Element: <a> | href="../controll/upload.php" | Text: "Upload App"
+[2026-06-18 00:23:52] [page_view] User: SOFAI | IP: ::1 | Page: http://localhost/s1/blog-php/controll/upload.php | Action: Screen Resolution: 1280x800
+[2026-06-18 00:23:55] [click_action] User: SOFAI | IP: ::1 | Page: http://localhost/s1/blog-php/controll/upload.php | Action: Element: <nav> | Text: "SOFAI 4H
+Home
+Dash
+Blog
+Contact
+Go Down
+"
+[2026-06-18 00:23:55] [click_action] User: SOFAI | IP: ::1 | Page: http://localhost/s1/blog-php/controll/upload.php | Action: Element: <a> | href="/s1/blog-php/controll/routing.php?home" | Text: "Home"
+[2026-06-18 00:23:56] [page_view] User: SOFAI | IP: ::1 | Page: http://localhost/s1/blog-php/public/index.html | Action: Screen Resolution: 1280x800
