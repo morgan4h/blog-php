@@ -163,3 +163,19 @@ find the newest courses about g"
 [2026-06-22 21:40:33] [click_action] User: SOFAI | IP: ::1 | Page: http://localhost/s1/blog-php/public/pages/community.html | Action: Element: <body> | Text: "SOFAI 4H
 SOFAI 4H
 Home Dash Blog Contact"
+[2026-06-22 22:01:52] [page_view] User: SOFAI | IP: ::1 | Page: http://localhost/s1/blog-php/public/pages/community.html | Action: Screen Resolution: 1680x1050
+[2026-06-22 22:01:54] [click_action] User: SOFAI | IP: ::1 | Page: http://localhost/s1/blog-php/public/pages/community.html | Action: Element: <i.fab.fa-instagram>
+[2026-06-22 22:04:53] [page_view] User: SOFAI | IP: ::1 | Page: http://localhost/s1/blog-php/public/pages/community.html | Action: Screen Resolution: 1280x800
+[2026-06-22 22:04:56] [click_action] User: SOFAI | IP: ::1 | Page: http://localhost/s1/blog-php/public/pages/community.html | Action: Element: <i.fab.fa-instagram>
+[2026-06-22 22:05:10] [click_action] User: SOFAI | IP: ::1 | Page: http://localhost/s1/blog-php/public/pages/community.html | Action: Element: <a> | href="/s1/blog-php/controll/routing.php?dash" | Text: "Dash"
+[2026-06-22 22:05:10] [page_view] User: SOFAI | IP: ::1 | Page: http://localhost/s1/blog-php/dash/index.php | Action: Screen Resolution: 1680x1050
+[2026-06-22 22:05:11] [click_action] User: SOFAI | IP: ::1 | Page: http://localhost/s1/blog-php/dash/index.php | Action: Element: <a> | href="content.php" | Text: "website content"
+[2026-06-22 22:05:11] [page_view] User: SOFAI | IP: ::1 | Page: http://localhost/s1/blog-php/dash/content.php | Action: Screen Resolution: 1680x1050
+[2026-06-22 22:05:13] [click_action] User: SOFAI | IP: ::1 | Page: http://localhost/s1/blog-php/dash/content.php | Action: Element: <select.select-links> | Text: "socail medai
+main video"
+[2026-06-22 22:05:14] [click_action] User: SOFAI | IP: ::1 | Page: http://localhost/s1/blog-php/dash/content.php | Action: Element: <button.links> | Text: "change link"
+[2026-06-22 22:05:18] [click_action] User: SOFAI | IP: ::1 | Page: http://localhost/s1/blog-php/dash/content.php | Action: Element: <input>
+[2026-06-22 22:05:18] [click_action] User: SOFAI | IP: ::1 | Page: http://localhost/s1/blog-php/dash/content.php | Action: Element: <input>
+[2026-06-22 22:05:18] [click_action] User: SOFAI | IP: ::1 | Page: http://localhost/s1/blog-php/dash/content.php | Action: Element: <input>
+[2026-06-22 22:05:19] [click_action] User: SOFAI | IP: ::1 | Page: http://localhost/s1/blog-php/dash/content.php | Action: Element: <body> | Text: "SOFAI 4H
+Home Dash Blog Contact Go Down "
