@@ -87,3 +87,79 @@ Go Down
 "
 [2026-06-18 00:23:55] [click_action] User: SOFAI | IP: ::1 | Page: http://localhost/s1/blog-php/controll/upload.php | Action: Element: <a> | href="/s1/blog-php/controll/routing.php?home" | Text: "Home"
 [2026-06-18 00:23:56] [page_view] User: SOFAI | IP: ::1 | Page: http://localhost/s1/blog-php/public/index.html | Action: Screen Resolution: 1280x800
+[2026-06-22 21:32:33] [page_view] User: Guest | IP: ::1 | Timezone: Europe/Berlin | Page: http://localhost/s1/blog-php/public/index.html | Action: Screen Resolution: 1680x1050
+[2026-06-22 21:32:37] [click_action] User: Guest | IP: ::1 | Timezone: Europe/Berlin | Page: http://localhost/s1/blog-php/public/index.html | Action: Element: <img> | src="../res//icons/undraw_blog-post_f68f.svg"
+[2026-06-22 21:32:37] [page_view] User: Guest | IP: ::1 | Timezone: Europe/Berlin | Page: http://localhost/s1/blog-php/public/pages/sphone.html | Action: Screen Resolution: 1680x1050
+[2026-06-22 21:32:40] [page_view] User: Guest | IP: ::1 | Timezone: Europe/Berlin | Page: http://localhost/s1/blog-php/public/index.html | Action: Screen Resolution: 1680x1050
+[2026-06-22 21:32:42] [click_action] User: Guest | IP: ::1 | Timezone: Europe/Berlin | Page: http://localhost/s1/blog-php/public/index.html | Action: Element: <img> | src="../res//icons/undraw_functions_7led.svg"
+[2026-06-22 21:32:43] [page_view] User: Guest | IP: ::1 | Timezone: Europe/Berlin | Page: http://localhost/s1/blog-php/public/pages/course.html | Action: Screen Resolution: 1680x1050
+[2026-06-22 21:32:45] [click_action] User: Guest | IP: ::1 | Timezone: Europe/Berlin | Page: http://localhost/s1/blog-php/public/pages/course.html | Action: Element: <h2> | Text: "🥇 Premium Courses - Access All Areas"
+[2026-06-22 21:32:45] [click_action] User: Guest | IP: ::1 | Timezone: Europe/Berlin | Page: http://localhost/s1/blog-php/public/pages/course.html | Action: Element: <h2> | Text: "🥇 Premium Courses - Access All Areas"
+[2026-06-22 21:33:10] [page_view] User: Guest | IP: ::1 | Timezone: Europe/Berlin | Page: http://localhost/s1/blog-php/public/pages/course.html | Action: Screen Resolution: 1680x1050
+[2026-06-22 21:33:10] [page_view] User: Guest | IP: ::1 | Timezone: Europe/Berlin | Page: http://localhost/s1/blog-php/public/pages/course.html | Action: Screen Resolution: 1680x1050
+[2026-06-22 21:33:11] [page_view] User: Guest | IP: ::1 | Timezone: Europe/Berlin | Page: http://localhost/s1/blog-php/public/pages/course.html | Action: Screen Resolution: 1680x1050
+[2026-06-22 21:33:14] [page_view] User: Guest | IP: ::1 | Timezone: Europe/Berlin | Page: http://localhost/s1/blog-php/public/pages/course.html | Action: Screen Resolution: 1280x800
+[2026-06-22 21:33:17] [click_action] User: Guest | IP: ::1 | Timezone: Europe/Berlin | Page: http://localhost/s1/blog-php/public/pages/course.html | Action: Element: <a> | href="../index.html" | Text: "HOME"
+[2026-06-22 21:33:17] [page_view] User: Guest | IP: ::1 | Timezone: Europe/Berlin | Page: http://localhost/s1/blog-php/public/index.html | Action: Screen Resolution: 1680x1050
+[2026-06-22 21:33:58] [page_view] User: Guest | IP: ::1 | Timezone: Europe/Berlin | Page: http://localhost/s1/blog-php/public/index.html | Action: Screen Resolution: 1680x1050
+[2026-06-22 21:34:00] [click_action] User: Guest | IP: ::1 | Timezone: Europe/Berlin | Page: http://localhost/s1/blog-php/public/index.html | Action: Element: <a> | href="/s1/blog-php/controll/routing.php?dash" | Text: "Dash"
+[2026-06-22 21:34:00] [page_view] User: Guest | IP: ::1 | Timezone: Europe/Berlin | Page: http://localhost/s1/blog-php/model/404.html | Action: Screen Resolution: 1680x1050
+[2026-06-22 21:34:01] [click_action] User: Guest | IP: ::1 | Timezone: Europe/Berlin | Page: http://localhost/s1/blog-php/model/404.html | Action: Element: <a.home-btn> | href="/" | Text: "RETURN TO BASE"
+[2026-06-22 21:34:05] [click_action] User: Guest | IP: ::1 | Timezone: Europe/Berlin | Page: http://localhost/s1/blog-php/public/index.html | Action: Element: <a.login> | href="/s1/blog-php/controll/login.php" | Text: "Login"
+[2026-06-22 21:34:05] [page_view] User: Guest | IP: ::1 | Timezone: Europe/Berlin | Page: http://localhost/s1/blog-php/controll/login.php | Action: Screen Resolution: 1680x1050
+[2026-06-22 21:34:07] [click_action] User: Guest | IP: ::1 | Timezone: Europe/Berlin | Page: http://localhost/s1/blog-php/controll/login.php | Action: Element: <input>
+[2026-06-22 21:34:07] [click_action] User: Guest | IP: ::1 | Timezone: Europe/Berlin | Page: http://localhost/s1/blog-php/controll/login.php | Action: Element: <input>
+[2026-06-22 21:34:13] [click_action] User: Guest | IP: ::1 | Timezone: Europe/Berlin | Page: http://localhost/s1/blog-php/controll/login.php | Action: Element: <button> | Text: "Login"
+[2026-06-22 21:34:13] [page_view] User: Guest | IP: ::1 | Timezone: Europe/Berlin | Page: http://localhost/s1/blog-php/controll/login.php | Action: Screen Resolution: 1680x1050
+[2026-06-22 21:38:57] [click_action] User: Guest | IP: ::1 | Timezone: Europe/Berlin | Page: http://localhost/s1/blog-php/controll/login.php | Action: Element: <body> | Text: "Incorrect email or password.
+Email
+Passw"
+[2026-06-22 21:38:58] [click_action] User: Guest | IP: ::1 | Timezone: Europe/Berlin | Page: http://localhost/s1/blog-php/controll/login.php | Action: Element: <body> | Text: "Incorrect email or password.
+Email
+Passw"
+[2026-06-22 21:38:58] [click_action] User: Guest | IP: ::1 | Timezone: Europe/Berlin | Page: http://localhost/s1/blog-php/controll/login.php | Action: Element: <body> | Text: "Incorrect email or password.
+Email
+Passw"
+[2026-06-22 21:38:58] [click_action] User: Guest | IP: ::1 | Timezone: Europe/Berlin | Page: http://localhost/s1/blog-php/controll/login.php | Action: Element: <body> | Text: "Incorrect email or password.
+Email
+Passw"
+[2026-06-22 21:39:04] [click_action] User: Guest | IP: ::1 | Timezone: Europe/Berlin | Page: http://localhost/s1/blog-php/controll/login.php | Action: Element: <form.login-card> | Text: "Incorrect email or password.
+Email
+Passw"
+[2026-06-22 21:39:05] [click_action] User: Guest | IP: ::1 | Timezone: Europe/Berlin | Page: http://localhost/s1/blog-php/controll/login.php | Action: Element: <a> | href="sing.php" | Text: "Sign up"
+[2026-06-22 21:39:05] [page_view] User: Guest | IP: ::1 | Timezone: Europe/Berlin | Page: http://localhost/s1/blog-php/controll/sing.php | Action: Screen Resolution: 1680x1050
+[2026-06-22 21:39:06] [click_action] User: Guest | IP: ::1 | Timezone: Europe/Berlin | Page: http://localhost/s1/blog-php/controll/sing.php | Action: Element: <input>
+[2026-06-22 21:39:15] [click_action] User: Guest | IP: ::1 | Timezone: Europe/Berlin | Page: http://localhost/s1/blog-php/controll/sing.php | Action: Element: <button> | Text: "Accept terms and continue"
+[2026-06-22 21:39:15] [page_view] User: Guest | IP: ::1 | Timezone: Europe/Berlin | Page: http://localhost/s1/blog-php/controll/sing.php | Action: Screen Resolution: 1680x1050
+[2026-06-22 21:39:18] [click_action] User: Guest | IP: ::1 | Timezone: Europe/Berlin | Page: http://localhost/s1/blog-php/controll/sing.php | Action: Element: <input>
+[2026-06-22 21:39:29] [click_action] User: Guest | IP: ::1 | Timezone: Europe/Berlin | Page: http://localhost/s1/blog-php/controll/sing.php | Action: Element: <button> | Text: "Accept terms and continue"
+[2026-06-22 21:39:29] [page_view] User: Guest | IP: ::1 | Timezone: Europe/Berlin | Page: http://localhost/s1/blog-php/controll/login.php?signup=success | Action: Screen Resolution: 1680x1050
+[2026-06-22 21:39:42] [click_action] User: Guest | IP: ::1 | Timezone: Europe/Berlin | Page: http://localhost/s1/blog-php/controll/login.php?signup=success | Action: Element: <input>
+[2026-06-22 21:39:45] [click_action] User: Guest | IP: ::1 | Timezone: Europe/Berlin | Page: http://localhost/s1/blog-php/controll/login.php?signup=success | Action: Element: <button> | Text: "Login"
+[2026-06-22 21:39:45] [page_view] User: SOFAI | IP: ::1 | Page: http://localhost/s1/blog-php/public/index.html | Action: Screen Resolution: 1680x1050
+[2026-06-22 21:39:48] [click_action] User: SOFAI | IP: ::1 | Page: http://localhost/s1/blog-php/public/index.html | Action: Element: <a> | href="/s1/blog-php/controll/routing.php?dash" | Text: "Dash"
+[2026-06-22 21:39:48] [page_view] User: SOFAI | IP: ::1 | Page: http://localhost/s1/blog-php/dash/index.php | Action: Screen Resolution: 1680x1050
+[2026-06-22 21:39:50] [click_action] User: SOFAI | IP: ::1 | Page: http://localhost/s1/blog-php/dash/index.php | Action: Element: <a> | href="content.php" | Text: "website content"
+[2026-06-22 21:39:50] [page_view] User: SOFAI | IP: ::1 | Page: http://localhost/s1/blog-php/dash/content.php | Action: Screen Resolution: 1680x1050
+[2026-06-22 21:39:53] [click_action] User: SOFAI | IP: ::1 | Page: http://localhost/s1/blog-php/dash/content.php | Action: Element: <select.select-theme> | Text: "change color
+change the theme dark/light"
+[2026-06-22 21:39:54] [click_action] User: SOFAI | IP: ::1 | Page: http://localhost/s1/blog-php/dash/content.php | Action: Element: <button.styling> | Text: "change css"
+[2026-06-22 21:40:18] [click_action] User: SOFAI | IP: ::1 | Page: http://localhost/s1/blog-php/dash/content.php | Action: Element: <body> | Text: "SOFAI 4H
+Home Dash Blog Contact Go Down "
+[2026-06-22 21:40:20] [click_action] User: SOFAI | IP: ::1 | Page: http://localhost/s1/blog-php/dash/content.php | Action: Element: <a> | href="/s1/blog-php/controll/routing.php?dash" | Text: "Dash"
+[2026-06-22 21:40:20] [page_view] User: SOFAI | IP: ::1 | Page: http://localhost/s1/blog-php/dash/index.php | Action: Screen Resolution: 1680x1050
+[2026-06-22 21:40:21] [click_action] User: SOFAI | IP: ::1 | Page: http://localhost/s1/blog-php/dash/index.php | Action: Element: <body> | Text: "SOFAI 4H
+Home Dash Blog Contact Go Down "
+[2026-06-22 21:40:22] [click_action] User: SOFAI | IP: ::1 | Page: http://localhost/s1/blog-php/dash/index.php | Action: Element: <div.links> | Text: "Home Dash Blog Contact Go Down SOFAI"
+[2026-06-22 21:40:22] [click_action] User: SOFAI | IP: ::1 | Page: http://localhost/s1/blog-php/dash/index.php | Action: Element: <a> | href="/s1/blog-php/controll/routing.php?home" | Text: "Home"
+[2026-06-22 21:40:22] [page_view] User: SOFAI | IP: ::1 | Page: http://localhost/s1/blog-php/public/index.html | Action: Screen Resolution: 1680x1050
+[2026-06-22 21:40:25] [click_action] User: SOFAI | IP: ::1 | Page: http://localhost/s1/blog-php/public/index.html | Action: Element: <div.article> | Text: "courses
+
+find the newest courses about g"
+[2026-06-22 21:40:26] [click_action] User: SOFAI | IP: ::1 | Page: http://localhost/s1/blog-php/public/index.html | Action: Element: <img> | src="../res//icons/undraw_functions_7led.svg"
+[2026-06-22 21:40:26] [page_view] User: SOFAI | IP: ::1 | Page: http://localhost/s1/blog-php/public/pages/course.html | Action: Screen Resolution: 1680x1050
+[2026-06-22 21:40:29] [click_action] User: SOFAI | IP: ::1 | Page: http://localhost/s1/blog-php/public/index.html | Action: Element: <img> | src="../res//icons/undraw_friends-online_gvwz.svg"
+[2026-06-22 21:40:29] [page_view] User: SOFAI | IP: ::1 | Page: http://localhost/s1/blog-php/public/pages/community.html | Action: Screen Resolution: 1680x1050
+[2026-06-22 21:40:33] [click_action] User: SOFAI | IP: ::1 | Page: http://localhost/s1/blog-php/public/pages/community.html | Action: Element: <body> | Text: "SOFAI 4H
+SOFAI 4H
+Home Dash Blog Contact"
